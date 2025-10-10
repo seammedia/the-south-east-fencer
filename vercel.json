@@ -55,6 +55,26 @@
       "source": "/services/fence-cleaning.html",
       "destination": "/services/fencing-repair.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/how-to-build-a-hampton-style-fence-complete-2025-construction-guide/",
+      "destination": "/blog/how-to-build-a-hampton-style-fence-complete-2025-construction-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/colorbond-fence-extensions-melbourne-complete-2025-installation-guide/",
+      "destination": "/blog/colorbond-fence-extensions-melbourne-complete-2025-installation-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fencing-eastern-suburbs-melbourne-complete-2025-service-guide/",
+      "destination": "/blog/fencing-eastern-suburbs-melbourne-complete-2025-service-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/frameless-pool-fencing-melbourne-complete-2025-safety-style-guide/",
+      "destination": "/blog/frameless-pool-fencing-melbourne-complete-2025-safety-style-guide.html",
+      "permanent": true
     }
   ],
   "headers": [

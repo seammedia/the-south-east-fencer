@@ -131,8 +131,34 @@
   <!-- Blog (if exists) -->
   <url>
     <loc>https://www.thesoutheastfencer.com.au/blog/</loc>
-    <lastmod>2025-10-10</lastmod>
+    <lastmod>2025-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/blog/how-to-build-a-hampton-style-fence-complete-2025-construction-guide.html</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/blog/colorbond-fence-extensions-melbourne-complete-2025-installation-guide.html</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/blog/fencing-eastern-suburbs-melbourne-complete-2025-service-guide.html</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/blog/frameless-pool-fencing-melbourne-complete-2025-safety-style-guide.html</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
