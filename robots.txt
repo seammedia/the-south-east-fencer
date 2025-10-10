@@ -1,9 +1,14 @@
 # Robots.txt for The South East Fencer
-# STAGING VERSION - Blocks all crawlers
-# TODO: Update for production to allow indexing
+# Production version - allows crawling
 
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /admin/
+Disallow: /.vercel/
+Disallow: /node_modules/
 
-# Note: This file is configured for staging/preview environments.
-# For production, update to allow crawling of public pages.
+# Sitemap
+Sitemap: https://www.thesoutheastfencer.com.au/sitemap.xml
+
+# Crawl delay (optional, uncomment if needed)
+# Crawl-delay: 1

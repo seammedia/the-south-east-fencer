@@ -1171,7 +1171,7 @@ html { scroll-padding-top: var(--sef-header-height); }
 /* === Hero — image + typography === */
 .hero--mpr {
   /* force the correct image */
-  background-image: url("/img/hero-main-image-new.png?v=2");
+  background-image: url("/img/The_South_East_Fencer_Main.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

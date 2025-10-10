@@ -1,5 +1,62 @@
 {
   "version": 2,
+  "redirects": [
+    {
+      "source": "/services/colorbond-fencing.html",
+      "destination": "/services/fencing-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/timber-fencing.html",
+      "destination": "/services/fencing-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/pool-fencing.html",
+      "destination": "/services/privacy-screens.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/gates.html",
+      "destination": "/services/fencing-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-fences.html",
+      "destination": "/services/fencing-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/fence-repairs.html",
+      "destination": "/services/fencing-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-fence-repairs.html",
+      "destination": "/services/fencing-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/fence-restoration.html",
+      "destination": "/services/fencing-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/re-fencing.html",
+      "destination": "/services/fencing-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/fence-painting.html",
+      "destination": "/services/fencing-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/fence-cleaning.html",
+      "destination": "/services/fencing-repair.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)\\.(avif|webp|jpg|png|svg|css|js|woff2)$",
