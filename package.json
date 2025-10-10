@@ -1,0 +1,15 @@
+{
+  "name": "the-south-east-fencer",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Professional fencing services across Mornington Peninsula and South-East Melbourne",
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  },
+  "scripts": {
+    "build:images": "node tools/build-images.mjs",
+    "dev": "python3 -m http.server 8000",
+    "preview": "python3 -m http.server 8000"
+  }
+}

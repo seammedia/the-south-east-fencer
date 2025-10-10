@@ -1,0 +1,9 @@
+# Robots.txt for The South East Fencer
+# STAGING VERSION - Blocks all crawlers
+# TODO: Update for production to allow indexing
+
+User-agent: *
+Disallow: /
+
+# Note: This file is configured for staging/preview environments.
+# For production, update to allow crawling of public pages.

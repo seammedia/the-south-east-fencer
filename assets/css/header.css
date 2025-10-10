@@ -1,0 +1,185 @@
+:root{
+  --nav-bg:#0e2330;
+  --nav-bg-dark:#0b1b26;
+  --text:#0b1b26;
+  --white:#fff;
+  --muted:#7c8a97;
+  --brand:#1ea0ff; /* matches your hero button blue */
+  --accent:#5a7d6a; /* your green buttons */
+  --border:#1d2d3a;
+}
+
+/* reset small bits for consistency */
+.sef-reset, .sef-reset *{ box-sizing:border-box; }
+.sef-hide{ display:none !important; }
+
+/* Header wrapper – sticky and above all content */
+.sef-header{
+  position:sticky; top:0; z-index:10000; /* very high to beat any hero stacking context */
+  width:100%;
+  background:rgba(14,35,48,0.92);
+  backdrop-filter:saturate(140%) blur(6px);
+  -webkit-backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+/* container */
+.sef-nav{
+  max-width:1200px; margin:0 auto; padding:12px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  color:var(--white);
+}
+
+/* brand */
+.sef-brand{
+  display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--white);
+}
+.sef-logo{
+  width:30px; height:30px; border-radius:6px; background:#fff1; display:grid; place-items:center;
+  font-weight:800; font-size:14px;
+}
+.sef-brand-title{
+  display:flex; flex-direction:column; line-height:1;
+}
+.sef-brand-title .sef-sub{ font:500 11px/1 Roboto, system-ui, -apple-system, "Segoe UI"; letter-spacing:.14em; opacity:.7; text-transform:uppercase;}
+.sef-brand-title .sef-main{
+  font-family:"Peace Sans","Peace Sans Webfont", impact, sans-serif;
+  font-size:18px; letter-spacing:.02em; text-transform:uppercase;
+}
+
+/* desktop nav */
+.sef-links{ display:flex; align-items:center; gap:20px; }
+.sef-link, .sef-drop-toggle{
+  color:var(--white); text-decoration:none; font:500 14px/1 Roboto, system-ui;
+  padding:8px 10px; border-radius:8px; transition:.2s ease;
+}
+.sef-link:hover, .sef-drop-toggle:hover{ background:#ffffff14; }
+
+/* dropdown (desktop) */
+.sef-dropdown{ position:relative; }
+.sef-drop-menu{
+  position:absolute; top:110%; left:0; background:var(--nav-bg-dark); border:1px solid var(--border);
+  border-radius:12px; min-width:220px; padding:6px; display:none; box-shadow:0 8px 28px rgba(0,0,0,.35);
+}
+.sef-dropdown:hover .sef-drop-menu{ display:block; }
+.sef-drop-link{
+  display:block; padding:10px 12px; border-radius:8px; color:#e7eff6; text-decoration:none; font:500 14px Roboto;
+}
+.sef-drop-link:hover{ background:#ffffff12; }
+
+/* right cluster (phone + cta) */
+.sef-right{ display:flex; align-items:center; gap:10px; }
+.sef-phone{ color:var(--white); text-decoration:none; font:600 14px/1 Roboto; background:#ffffff12; padding:8px 10px; border-radius:8px; }
+.sef-cta{ background:var(--accent); color:var(--white); text-decoration:none; padding:10px 12px; border-radius:10px; font:700 14px/1 Roboto; }
+
+/* hamburger only on mobile */
+.sef-hamburger{
+  display:none; width:44px; height:36px; align-items:center; justify-content:center;
+  border-radius:10px; background:#ffffff12; cursor:pointer;
+  border:1px solid #ffffff1a;
+}
+.sef-hamburger svg{ width:22px; height:22px; stroke-width:2.4; stroke:#fff; }
+
+/* OFF-CANVAS (mobile) */
+.sef-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:9998; opacity:0; visibility:hidden; transition:.2s ease;
+}
+.sef-overlay.is-open{ opacity:1; visibility:visible; }
+
+.sef-drawer{
+  position:fixed; top:0; left:0; height:100vh; width:88vw; max-width:360px;
+  background:var(--nav-bg); color:var(--white); z-index:9999;
+  transform:translateX(-100%); transition:transform .26s ease;
+  display:flex; flex-direction:column;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.06), 0 28px 60px rgba(0,0,0,.45);
+}
+.sef-drawer.is-open{ transform:translateX(0); }
+
+.sef-drawer-head{
+  padding:18px 16px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.08);
+}
+.sef-close{
+  width:40px; height:32px; display:grid; place-items:center; border-radius:8px; background:#ffffff12; cursor:pointer;
+  border:1px solid #ffffff1a;
+}
+.sef-close svg{ width:22px; height:22px; stroke:#fff; stroke-width:2.4; }
+
+/* drawer links */
+.sef-drawer-nav{ padding:8px; overflow:auto; -webkit-overflow-scrolling:touch; }
+.sef-drawer-link, .sef-drawer-accordion-btn{
+  display:flex; align-items:center; justify-content:space-between;
+  width:100%; color:#e7eff6; text-decoration:none; padding:12px 12px; border-radius:0; font:600 15px Roboto;
+  background: transparent; border: 0; cursor: pointer;
+}
+.sef-drawer-link:hover, .sef-drawer-accordion-btn:hover{ background:#ffffff12; }
+
+/* Style accordion buttons to match regular drawer links */
+.sef-drawer-accordion-btn {
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Chevron styling for accordion buttons */
+.sef-drawer-accordion-btn .chevron {
+  width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2;
+  transition: transform .2s ease; margin-left: auto;
+}
+.sef-drawer-accordion.open .sef-drawer-accordion-btn .chevron { 
+  transform: rotate(180deg); 
+}
+.sef-drawer-accordion{ margin-top:6px; }
+.sef-acc-panel{ display:none; padding:6px 6px 6px 10px; }
+.sef-acc-link{ display:block; padding:10px 10px; border-radius:10px; color:#dbe8f2; text-decoration:none; font:500 14px Roboto; }
+.sef-acc-link:hover{ background:#ffffff12; }
+
+/* drawer footer */
+.sef-drawer-foot{ margin-top:auto; padding:12px; border-top:1px solid rgba(255,255,255,.08); display:flex; gap:10px; }
+.sef-drawer-phone{ flex:1; text-align:center; text-decoration:none; color:var(--white); background:#ffffff12; padding:10px 12px; border-radius:10px; font:700 14px Roboto; }
+.sef-drawer-cta{ flex:1; text-align:center; text-decoration:none; color:var(--white); background:var(--accent); padding:10px 12px; border-radius:10px; font:700 14px Roboto; }
+
+/* responsive */
+@media (max-width: 1024px){
+  .sef-links, .sef-right{ display:none; }
+  .sef-hamburger{ display:flex; }
+}
+
+/* Body lock when menu open */
+.sef-lock{ overflow:hidden; touch-action:none; }
+
+/* Ensure scrolled pages don't overlap with header content */
+html { scroll-padding-top: 80px; }
+
+/* Override old header styles */
+.site-header, .nav-desktop, .nav-list, .has-sub, .sub-toggle, .sub-menu,
+.nav-ctas, .hamburger, .overlay, .drawer, .drawer-header, .drawer-nav,
+.drawer-list, .accordion, .acc-btn, .acc-panel { display: none !important; }
+
+/* ===========================
+   DESKTOP NAV: dropdown links
+   =========================== */
+@media (min-width: 1025px) {
+  /* Make dropdown toggles look identical to regular nav links */
+  .sef-drop-toggle {
+    background: transparent !important;
+    border: 0 !important;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  /* Add chevron indicators to dropdown buttons */
+  .sef-drop-toggle::after {
+    content: "▾";
+    margin-left: 6px;
+    font-size: 0.85em;
+    opacity: 0.85;
+  }
+
+  /* Ensure consistent hover states */
+  .sef-link:hover, .sef-drop-toggle:hover { 
+    background: rgba(255,255,255,0.08) !important; 
+  }
+}

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The South East Fencer - Professional fencing solutions for 25+ years. Expert repairs, restorations, re-fencing and fence painting from across Mornington Peninsula & South-East Melbourne.">
+    <meta name="keywords" content="fencing, Mornington Peninsula, fence repairs, fence restoration, re-fencing, fence painting, Mount Eliza, Sorrento">
+    <title>The South East Fencer - Professional Fencing Solutions for 25+ Years</title>
+    
+    <!-- SEO Essentials -->
+    <link rel="canonical" href="https://www.thesoutheastfencer.com.au/">
+    <meta property="og:title" content="The South East Fencer - Professional Fencing Solutions for 25+ Years">
+    <meta property="og:description" content="Professional fencing solutions for 25+ years. Expert repairs, restorations, re-fencing and fence painting from across Mornington Peninsula & South-East Melbourne.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.thesoutheastfencer.com.au/">
+    <meta property="og:image" content="https://www.thesoutheastfencer.com.au/assets/img/About_Us.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The South East Fencer - Professional Fencing Solutions for 25+ Years">
+    <meta name="twitter:description" content="Professional fencing solutions for 25+ years. Expert repairs, restorations, re-fencing and fence painting from across Mornington Peninsula & South-East Melbourne.">
+    <meta name="twitter:image" content="https://www.thesoutheastfencer.com.au/assets/img/About_Us.jpg">
+    
+    <!-- Preload brand font (TTF). If you later add WOFF2, prefer that instead -->
+    <link rel="preload" href="/assets/fonts/Peace Sans Webfont.ttf" as="font" type="font/ttf" crossorigin>
+    
+    <!-- Roboto for "The Timber Fencing Specialists" line -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- (Optional) Preload hero image to avoid flash -->
+    <link rel="preload" as="image" href="/img/hero-main-image-new.png">
+    
+    <!-- Optimized CSS Loading -->
+    <link rel="preload" as="style" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Critical CSS for LCP/Header -->
+    <style>
+        /* Critical above-the-fold CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        /* Scroll padding for anchor links with sticky header */
+        html { scroll-padding-top: 80px; }
+        
+        /* Hero - optimized for LCP */
+        
+        /* Accessibility */
+        .visually-hidden { 
+            position: absolute !important; 
+            width: 1px !important; 
+            height: 1px !important; 
+            padding: 0 !important; 
+            margin: -1px !important; 
+            overflow: hidden !important; 
+            clip: rect(0, 0, 0, 0) !important; 
+            white-space: nowrap !important; 
+            border: 0 !important; 
+        }
+        
+        /* FAQ Styles */
+        .faq-list{display:grid;gap:10px;margin-top:10px}
+        .faq-list details{border-top:1px solid #e7ecef;padding:8px 0}
+        .faq-list details:last-child{border-bottom:1px solid #e7ecef}
+        .faq-list summary{cursor:pointer;list-style:none;font-weight:700;color:#0e2233;display:flex;align-items:center;justify-content:space-between;padding:4px 0}
+        .faq-list summary::-webkit-details-marker{display:none}
+        .faq-list .answer{padding:8px 0 4px;color:#314656;line-height:1.55}
+        .faq-list .answer a{color:#0f766e;text-decoration:underline}
+        /* Optional chevron */
+        .faq-list summary::after{content:'▼';transition:transform .2s ease;opacity:.6;font-size:.8em}
+        .faq-list details[open] summary::after{transform:rotate(180deg)}
+        
+        /* FAQ section styling to match site design */
+        #faq{padding:48px 20px}
+        #faq h2{color:#0e2233;font-size:2rem;margin-bottom:24px;text-align:center}
+        
+        @media (max-width:768px){
+            #faq{padding:32px 20px}
+            #faq h2{font-size:1.5rem}
+        }
+
+        /* Guarantee Section Styles */
+        .guarantee{display:grid;gap:clamp(16px,2vw,28px);align-items:center;margin:28px auto;padding:48px 20px;overflow:visible}
+        .guarantee .g-copy h2{margin:0 0 6px;line-height:1.1;font-weight:800;color:#0e2233;font-size:2rem}
+        .guarantee .lede{font-size:1.15rem;margin:0 0 8px;color:#25323d;font-weight:500}
+        .guarantee .g-copy p{color:#314656;line-height:1.6;margin:0 0 12px}
+        .guarantee .g-points{display:grid;gap:6px;margin:8px 0 16px;padding-left:18px;color:#314656}
+        .guarantee .g-points li{margin-bottom:4px}
+        .guarantee .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+        .guarantee .g-media{border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+        .g-media-img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+        
+        @media(min-width:1000px){
+            .guarantee{grid-template-columns:1fr 1.15fr;min-height:clamp(360px,54vh,640px)}
+        }
+        @media(max-width:999px){
+            .guarantee{grid-template-columns:1fr;padding:32px 20px}
+            .guarantee .g-media{max-height:50vh}
+        }
+        @media(max-width:768px){
+            .guarantee .g-copy h2{font-size:1.5rem}
+            .guarantee .cta-row{flex-direction:column;gap:8px}
+            .guarantee .cta-row .btn, .guarantee .cta-row .btn-ghost{text-align:center}
+        }
+
+        /* Colorbond Colours Section Styles */
+        .cb{display:grid;gap:clamp(18px,2vw,28px);align-items:center;margin:28px auto;padding:48px 20px;overflow:visible}
+        .cb-left h2{margin:0 0 6px;line-height:1.06;font-weight:800;color:#0e2233;font-size:2rem}
+        .cb-left .lede{font-size:1.1rem;margin:0 0 8px;color:#25323d;font-weight:500}
+        .cb-left p{color:#314656;line-height:1.6;margin:0 0 12px}
+        .cb-points{display:grid;gap:6px;margin:8px 0 0;padding-left:18px;color:#314656}
+        .cb-points li{margin-bottom:4px}
+        .cb-points a{color:#0f766e;text-decoration:underline}
+        
+        /* Black ribbon badge */
+        .cb-ribbon{display:grid;place-items:center;overflow:visible}
+        .cb-ribbon .rb-in{
+            position:relative;
+            background:#0e2233;color:#fff;text-align:center;
+            padding:22px 24px 24px;border-radius:12px;
+            box-shadow:0 8px 24px rgba(0,0,0,.12);
+            min-width:210px
+        }
+        .cb-ribbon .rb-in strong{display:block;font-size:1.5rem;letter-spacing:.5px}
+        .cb-ribbon .rb-in span{display:block;font-size:1.25rem;font-weight:800;margin-top:2px}
+        .cb-ribbon .rb-in small{display:block;margin-top:4px;opacity:.85;font-size:.9rem}
+        /* Triangle pointer that sits OUTSIDE the box without clipping */
+        .cb-ribbon .rb-in::after{
+            content:"";position:absolute;left:50%;transform:translateX(-50%);
+            bottom:-12px;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;
+            border-top:12px solid #0e2233;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));
+        }
+        
+        /* Swatch card */
+        .cb-card{border:1px solid #e7ecef;border-radius:12px;padding:14px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+        .cb-card h3{margin:0 0 10px;font-weight:800;color:#0e2233}
+        .swatches{display:grid;grid-template-columns:repeat(6,20px);gap:10px}
+        .sw{width:20px;height:20px;border-radius:3px;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+        .cb-card .fine{margin-top:10px;font-size:.88rem;color:#4b5a63}
+        
+        @media(min-width:1100px){
+            .cb{grid-template-columns:1.1fr 0.6fr 0.9fr}
+        }
+        @media(max-width:1099px){
+            .cb{grid-template-columns:1fr;padding:32px 20px}
+            .cb-ribbon{order:3;margin-top:12px}
+        }
+        @media(max-width:768px){
+            .cb-left h2{font-size:1.5rem}
+            .swatches{grid-template-columns:repeat(4,20px)}
+        }
+        
+        /* Prevent layout shifts / forced reflow around images */
+        img { height: auto !important; }
+        .hero img { aspect-ratio: 16/9 !important; display: block !important; }
+        section[loading="lazy"], .lazy-section { content-visibility: auto; contain-intrinsic-size: 1px 800px; }
+
+        /* Accessibility utilities */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-QFTWK45LJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+  gtag('config', 'G-QFTWK45LJZ', { page_path: location.pathname });
+</script>
+</head>
+<body>
+<!-- Shared Header -->
+<link rel="preload" href="/assets/fonts/Peace Sans Webfont.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="/assets/css/header.css">
+
+<header class="sef-header sef-reset" role="banner">
+  <nav class="sef-nav" aria-label="Main navigation">
+    <!-- Brand -->
+    <a class="sef-brand" href="/index.html" aria-label="The South East Fencer">
+      <span class="sef-logo">SEF</span>
+      <span class="sef-brand-title">
+        <span class="sef-sub">The Timber Fencing Specialists</span>
+        <span class="sef-main">The South East Fencer</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="sef-links" aria-label="Primary">
+      <a class="sef-link" href="/index.html" data-nav="/">Home</a>
+      <a class="sef-link" href="/about.html" data-nav="/about.html">About</a>
+
+      <div class="sef-dropdown" aria-haspopup="true">
+        <button class="sef-drop-toggle" aria-expanded="false">Services</button>
+        <div class="sef-drop-menu" role="menu">
+          <a class="sef-drop-link" href="/services/fence-repairs.html" data-nav="/services/fence-repairs.html">Fence Repairs</a>
+          <a class="sef-drop-link" href="/services/fence-restoration.html" data-nav="/services/fence-restoration.html">Fence Restoration</a>
+          <a class="sef-drop-link" href="/services/re-fencing.html" data-nav="/services/re-fencing.html">Re-Fencing</a>
+          <a class="sef-drop-link" href="/services/fence-painting.html" data-nav="/services/fence-painting.html">Fence Painting</a>
+          <a class="sef-drop-link" href="/services/fence-cleaning.html" data-nav="/services/fence-cleaning.html">Fence Cleaning</a>
+          <a class="sef-drop-link" href="/services/emergency-fence-repairs.html" data-nav="/services/emergency-fence-repairs.html">Emergency Repairs</a>
+        </div>
+      </div>
+
+      <div class="sef-dropdown" aria-haspopup="true">
+        <button class="sef-drop-toggle" aria-expanded="false">Locations</button>
+        <div class="sef-drop-menu" role="menu">
+          <a class="sef-drop-link" href="/locations/mount-eliza.html" data-nav="/locations/mount-eliza.html">Mount Eliza</a>
+          <a class="sef-drop-link" href="/locations/mornington.html" data-nav="/locations/mornington.html">Mornington</a>
+          <a class="sef-drop-link" href="/locations/frankston.html" data-nav="/locations/frankston.html">Frankston</a>
+          <a class="sef-drop-link" href="/locations/sorrento.html" data-nav="/locations/sorrento.html">Sorrento</a>
+          <a class="sef-drop-link" href="/locations/rosebud.html" data-nav="/locations/rosebud.html">Rosebud</a>
+          <a class="sef-drop-link" href="/locations/carrum.html" data-nav="/locations/carrum.html">Carrum</a>
+          <a class="sef-drop-link" href="/locations/carrum-downs.html" data-nav="/locations/carrum-downs.html">Carrum Downs</a>
+          <a class="sef-drop-link" href="/locations/seaford.html" data-nav="/locations/seaford.html">Seaford</a>
+          <a class="sef-drop-link" href="/locations/mount-martha.html" data-nav="/locations/mount-martha.html">Mount Martha</a>
+          <a class="sef-drop-link" href="/locations/cranbourne.html" data-nav="/locations/cranbourne.html">Cranbourne</a>
+          <a class="sef-drop-link" href="/locations/flinders.html" data-nav="/locations/flinders.html">Flinders</a>
+          <a class="sef-drop-link" href="/locations/dromana.html" data-nav="/locations/dromana.html">Dromana</a>
+          <a class="sef-drop-link" href="/locations/hampton.html" data-nav="/locations/hampton.html">Hampton</a>
+        </div>
+      </div>
+
+      <a class="sef-link" href="/blog/" data-nav="/blog/">Blog</a>
+      <a class="sef-link" href="/contact.html" data-nav="/contact.html">Contact</a>
+    </div>
+
+    <!-- Desktop right -->
+    <div class="sef-right">
+      <a class="sef-phone" href="tel:+61341527766">03 4152 7766</a>
+      <a class="sef-cta" href="/contact.html">Get Quote</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="sef-open" class="sef-hamburger" aria-label="Open menu" aria-controls="sef-drawer">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<!-- Off-canvas + Overlay -->
+<div class="sef-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<aside id="sef-drawer" class="sef-drawer" aria-hidden="true" aria-label="Mobile menu" role="dialog">
+  <div class="sef-drawer-head">
+    <div class="sef-brand-title">
+      <span class="sef-sub">The Timber Fencing Specialists</span>
+      <span class="sef-main" style="font-family:'Peace Sans','Peace Sans Webfont',impact,sans-serif;">The South East Fencer</span>
+    </div>
+    <button id="sef-close" class="sef-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <nav class="sef-drawer-nav">
+    <a class="sef-drawer-link" href="/index.html" data-nav="/">Home</a>
+    <a class="sef-drawer-link" href="/about.html" data-nav="/about.html">About</a>
+
+    <!-- Services accordion -->
+    <div class="sef-drawer-accordion">
+      <button class="sef-drawer-accordion-btn" aria-expanded="false">
+        Services
+        <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="sef-acc-panel">
+        <a class="sef-acc-link" href="/services/fence-repairs.html" data-nav="/services/fence-repairs.html">Fence Repairs</a>
+        <a class="sef-acc-link" href="/services/fence-restoration.html" data-nav="/services/fence-restoration.html">Fence Restoration</a>
+        <a class="sef-acc-link" href="/services/re-fencing.html" data-nav="/services/re-fencing.html">Re-Fencing</a>
+        <a class="sef-acc-link" href="/services/fence-painting.html" data-nav="/services/fence-painting.html">Fence Painting</a>
+        <a class="sef-acc-link" href="/services/fence-cleaning.html" data-nav="/services/fence-cleaning.html">Fence Cleaning</a>
+        <a class="sef-acc-link" href="/services/emergency-fence-repairs.html" data-nav="/services/emergency-fence-repairs.html">Emergency Repairs</a>
+      </div>
+    </div>
+
+    <!-- Locations accordion -->
+    <div class="sef-drawer-accordion">
+      <button class="sef-drawer-accordion-btn" aria-expanded="false">
+        Locations
+        <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="sef-acc-panel">
+        <a class="sef-acc-link" href="/locations/mount-eliza.html" data-nav="/locations/mount-eliza.html">Mount Eliza</a>
+        <a class="sef-acc-link" href="/locations/mornington.html" data-nav="/locations/mornington.html">Mornington</a>
+        <a class="sef-acc-link" href="/locations/frankston.html" data-nav="/locations/frankston.html">Frankston</a>
+        <a class="sef-acc-link" href="/locations/sorrento.html" data-nav="/locations/sorrento.html">Sorrento</a>
+        <a class="sef-acc-link" href="/locations/rosebud.html" data-nav="/locations/rosebud.html">Rosebud</a>
+        <a class="sef-acc-link" href="/locations/carrum.html" data-nav="/locations/carrum.html">Carrum</a>
+        <a class="sef-acc-link" href="/locations/carrum-downs.html" data-nav="/locations/carrum-downs.html">Carrum Downs</a>
+        <a class="sef-acc-link" href="/locations/seaford.html" data-nav="/locations/seaford.html">Seaford</a>
+        <a class="sef-acc-link" href="/locations/mount-martha.html" data-nav="/locations/mount-martha.html">Mount Martha</a>
+        <a class="sef-acc-link" href="/locations/cranbourne.html" data-nav="/locations/cranbourne.html">Cranbourne</a>
+        <a class="sef-acc-link" href="/locations/flinders.html" data-nav="/locations/flinders.html">Flinders</a>
+        <a class="sef-acc-link" href="/locations/dromana.html" data-nav="/locations/dromana.html">Dromana</a>
+        <a class="sef-acc-link" href="/locations/hampton.html" data-nav="/locations/hampton.html">Hampton</a>
+      </div>
+    </div>
+
+    <a class="sef-drawer-link" href="/blog/" data-nav="/blog/">Blog</a>
+    <a class="sef-drawer-link" href="/contact.html" data-nav="/contact.html">Contact</a>
+  </nav>
+
+  <div class="sef-drawer-foot">
+    <a class="sef-drawer-phone" href="tel:+61341527766">03 4152 7766</a>
+    <a class="sef-drawer-cta" href="/contact.html">Get Quote</a>
+  </div>
+</aside>
+
+<script defer src="/assets/js/header.js"></script>
+
+
+
+    <!-- Lead-Gen Hero Section -->
+    <section class="hero hero--mpr" id="home-hero">
+
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__pretitle">THE ROOFING SPECIALISTS</p>
+          <h1 class="hero__title">The South East Fencer</h1>
+
+          <div class="hero__cta-row">
+            <a href="#hero-quote" class="btn btn--primary">Get a fast quote</a>
+            <a href="tel:+61341527766" class="btn btn--ghost">03 4152 7766</a>
+          </div>
+        </div>
+
+        <form id="hero-quote" class="hero-form" action="https://formspree.io/f/mjkebvdz" method="POST" novalidate>
+          <input type="hidden" name="page" value="home-hero" />
+
+          <div class="form-row">
+            <label for="hq-name">Full name</label>
+            <input id="hq-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="hq-email">Email address</label>
+            <input id="hq-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="hq-phone">Phone number</label>
+            <input id="hq-phone" name="phone" type="tel" placeholder="04xx xxx xxx" autocomplete="tel" required>
+          </div>
+
+          <div class="form-row">
+            <label for="hq-service">Service type</label>
+            <select id="hq-service" name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Fence Repairs</option>
+              <option>Fence Restoration</option>
+              <option>Re-Fencing</option>
+              <option>Fence Painting</option>
+              <option>Free Quote</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Get a fast quote</button>
+          <p class="form-note">No spam. We'll call you back quickly.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- USP/Trust Bar -->
+    <section class="usp wrap" aria-label="Key reasons">
+        <ul class="usp-list">
+            <li>25+ years local experience</li>
+            <li>Leak detection that fixes the root cause</li>
+            <li>Servicing the Mornington Peninsula</li>
+            <li><a class="btn-ghost" href="/contact.html">Get a quote</a></li>
+        </ul>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Services Section -->
+        <section id="services" class="wrap">
+            <h2>Fencing Services</h2>
+            <div class="card-grid">
+                <a class="card" href="/services/fence-repairs.html">
+                    <h3>Fence Repairs</h3>
+                    <p>Leak diagnosis, ridge repairs, flashing fixes and tile replacement. We locate the root cause and repair it right.</p>
+                </a>
+                <a class="card" href="/services/fence-restoration.html">
+                    <h3>Fence Restoration</h3>
+                    <p>Clean, re-bed/re-point, repairs and premium membrane coatings to bring tired fences back to life.</p>
+                </a>
+                <a class="card" href="/services/re-fencing.html">
+                    <h3>Re-Fencing</h3>
+                    <p>Colorbond and tiles for longevity. Modern materials with proper insulation and ventilation.</p>
+                </a>
+                <a class="card" href="/services/fence-painting.html">
+                    <h3>Fence Painting</h3>
+                    <p>Coastal-ready professional preparation and high-build membrane coatings for lasting protection.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== Fence Restoration Guarantee (place above #faq) ===== -->
+        <section id="guarantee" class="wrap guarantee" aria-label="10-year fence restoration guarantee">
+            <div class="g-copy">
+                <h2>10-Year Fence Restoration Guarantee</h2>
+                <p class="lede">We've got you and your home covered.</p>
+                <p>All The South East Fencer clients receive a 10-year workmanship guarantee on restoration projects — giving you confidence in coastal conditions.</p>
+                <p>If you're concerned about the condition of your fence, we'll inspect it, explain options and provide transparent pricing with no surprises.</p>
+                <ul class="g-points">
+                    <li>Full clean, repairs, re-bedding &amp; re-pointing</li>
+                    <li>Premium membrane system suited to coastal conditions</li>
+                    <li>Colour guidance for heat &amp; street appeal</li>
+                    <li>Local specialists servicing the Peninsula</li>
+                </ul>
+                <div class="cta-row">
+                    <a href="/contact.html" class="btn">Get a fast quote</a>
+                    <a href="tel:+61341527766" class="btn-ghost">03 4152 7766</a>
+                </div>
+            </div>
+            <!-- Guarantee media: force PNG known to exist -->
+            <div class="g-media">
+                <img
+                  src="/assets/img/colorbond-guarantee.png"
+                  alt="Modern Colorbond steel fence installation showing sleek profile and coastal durability"
+                  width="1200" height="800"
+                  loading="lazy" decoding="async"
+                  style="width:100%;height:auto;border-radius:16px;display:block"
+                >
+            </div>
+        </section>
+        <!-- ===== End Guarantee ===== -->
+
+        <!-- 25+ Years Experience Ribbon -->
+        <section id="experience-ribbon" class="ribbon ribbon--experience" aria-labelledby="experience-ribbon-title">
+          <div class="ribbon__inner">
+            <div class="ribbon__left">
+              <!-- Small accent icon -->
+              <span class="ribbon__icon" aria-hidden="true">
+                <!-- Fence/award style SVG to suggest longevity/quality -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" role="img">
+                  <path d="M3 12l9-7 9 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 21V9h6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+
+              <h3 id="experience-ribbon-title" class="ribbon__title">
+                25+ Years Experience
+              </h3>
+            </div>
+
+            <a class="ribbon__cta" href="tel:+61341527766" aria-label="Call The South East Fencer now">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="ribbon__cta-icon" aria-hidden="true">
+                <path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.1 3.16 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.89.34 1.76.65 2.59a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.49-1.22a2 2 0 0 1 2.11-.45c.83.31 1.7.53 2.59.65A2 2 0 0 1 22 16.92z"
+                    fill="currentColor"/>
+              </svg>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Before/After (Home) -->
+        <section id="before-after" class="home-section ba-section">
+          <div class="container">
+            <h2 class="home-heading h-like-faq">Recent fence transformation <span class="muted">(before / after)</span></h2>
+
+            <figure class="ba-wrap" aria-label="Before and after fence transformation slider">
+              <div class="ba-frame">
+                <img
+                  class="ba-img ba-img--after"
+                  src="/assets/img/fence_after.png"
+                  alt="After — new Colorbond fence installed"
+                  width="1024" height="1024" decoding="async" loading="lazy" />
+
+                <div class="ba-clip">
+                  <img
+                    class="ba-img ba-img--before"
+                    src="/assets/img/fence_before.png"
+                    alt="Before — old tiled fence with moss"
+                    width="1024" height="1024" decoding="async" loading="lazy" />
+                </div>
+
+                <button class="ba-handle" type="button" aria-label="Drag to reveal before or after"></button>
+                <span class="ba-badge ba-badge--before">Before</span>
+                <span class="ba-badge ba-badge--after">After</span>
+              </div>
+              <figcaption class="sr-only">Drag the handle to compare before and after.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- ===== Colorbond Colours (place above #faq) ===== -->
+        <section id="colourbond" class="wrap cb" aria-label="Colorbond colour options">
+            <div class="cb-left">
+                <h2>Give Your Home<br> a Makeover</h2>
+                <p class="lede">Restore your fence or refresh the look with Colorbond® colours chosen for Peninsula conditions.</p>
+                <p>We'll help you select shades that balance heat, acoustics and street appeal — from light coastal tones to classic heritage colours.</p>
+                <ul class="cb-points">
+                    <li>Advice on colour selection for your aspect and street</li>
+                    <li>Membrane systems designed for coastal durability</li>
+                    <li>Available with <a href="/services/fence-restoration.html">restoration</a> or <a href="/services/fence-painting.html">painting</a> services</li>
+                </ul>
+            </div>
+            <!-- Black badge (CSS ribbon, no image) -->
+            <div class="cb-ribbon" aria-label="10 year workmanship and labour guarantee">
+                <div class="rb-in">
+                    <strong>10 YEAR</strong>
+                    <span>GUARANTEE</span>
+                    <small>Workmanship &amp; Labour</small>
+                </div>
+            </div>
+            <!-- Swatch card -->
+            <aside class="cb-card" aria-label="Popular Colorbond colours">
+                <h3>Popular Colorbond® Colours</h3>
+                <div class="swatches">
+                    <!-- Each swatch has an accessible label -->
+                    <span class="sw" style="--c:#E8E9E4" aria-label="Surfmist"></span>
+                    <span class="sw" style="--c:#BFC4C4" aria-label="Shale Grey"></span>
+                    <span class="sw" style="--c:#78858B" aria-label="Windspray"></span>
+                    <span class="sw" style="--c:#4B5054" aria-label="Basalt"></span>
+                    <span class="sw" style="--c:#2F3033" aria-label="Monument"></span>
+                    <span class="sw" style="--c:#1B1D22" aria-label="Night Sky"></span>
+                    <span class="sw" style="--c:#CEC2AE" aria-label="Paperbark"></span>
+                    <span class="sw" style="--c:#CBB28A" aria-label="Classic Cream"></span>
+                    <span class="sw" style="--c:#9D8B76" aria-label="Dune"></span>
+                    <span class="sw" style="--c:#6E6255" aria-label="Gully"></span>
+                    <span class="sw" style="--c:#6C6F67" aria-label="Woodland Grey"></span>
+                    <span class="sw" style="--c:#38454F" aria-label="Ironstone"></span>
+                    <span class="sw" style="--c:#7E2B2A" aria-label="Manor Red"></span>
+                    <span class="sw" style="--c:#375343" aria-label="Cottage Green"></span>
+                    <span class="sw" style="--c:#2B4F73" aria-label="Deep Ocean"></span>
+                    <span class="sw" style="--c:#6F6256" aria-label="Jasper"></span>
+                    <span class="sw" style="--c:#5C6D6C" aria-label="Wallaby"></span>
+                    <span class="sw" style="--c:#8E9FA3" aria-label="Southerly"></span>
+                </div>
+                <p class="fine">Colours are indicative and vary by screen. We'll bring physical samples to confirm your selection.</p>
+            </aside>
+        </section>
+        <!-- ===== End Colorbond Colours ===== -->
+
+        <!-- Emergency CTA Banner -->
+        <section id="emergency-cta" class="emergency-cta" role="region" aria-labelledby="emergency-cta-title">
+          <div class="emergency-cta__inner">
+            <div class="emergency-cta__left">
+              <svg class="emergency-cta__icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12 3L2 10h2v8h6v-5h4v5h6v-8h2L12 3z"/>
+              </svg>
+              <h2 id="emergency-cta-title" class="emergency-cta__title">
+                Need Emergency Fence Repairs?
+              </h2>
+            </div>
+
+            <div class="emergency-cta__right">
+              <a class="emergency-cta__btn"
+                 href="tel:+61341527766"
+                 aria-label="Call now for emergency fence repairs on 03 4152 7766">
+                <svg class="emergency-cta__btn-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C11.85 22 2 12.15 2 1a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+                </svg>
+                CALL NOW
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== FAQ (Insert above the contact/quote section) ===== -->
+        <section id="faq" class="wrap" aria-label="Common fencing questions">
+            <h2>Common Questions</h2>
+            <!-- Accessible, no-JS accordion using <details> -->
+            <div class="faq-list">
+                <details>
+                    <summary>How fast can you attend a fence leak?</summary>
+                    <div class="answer">
+                        We prioritise active leaks and storm damage. Same-week call-outs are common across the Peninsula — emergency tarping available within 24-48 hours when needed.
+                    </div>
+                </details>
+                <details>
+                    <summary>Should I repair, restore or re-fence?</summary>
+                    <div class="answer">
+                        It depends on fence age and condition. We'll inspect and price the best option. See <a href="/services/fence-repairs.html">fence repairs</a>, <a href="/services/fence-restoration.html">restoration</a> or <a href="/services/re-fencing.html">re-fencing</a> for details.
+                    </div>
+                </details>
+                <details>
+                    <summary>What is included in a fence restoration?</summary>
+                    <div class="answer">
+                        Typically: high-pressure clean, repairs, re-bedding/re-pointing and a premium membrane system. Full scope depends on your fence's condition and material type.
+                    </div>
+                </details>
+                <details>
+                    <summary>Do you paint fences? Which colours suit coastal homes?</summary>
+                    <div class="answer">
+                        Yes — we prep and apply coatings suited to coastal conditions. Lighter greys help reduce summer heat, while darker tones suit heritage styles. See <a href="/services/fence-painting.html">fence painting</a> for details.
+                    </div>
+                </details>
+                <details>
+                    <summary>Can you work with both Colorbond® and tile fences?</summary>
+                    <div class="answer">
+                        Absolutely. We repair, restore and replace both metal (including Colorbond®) and tiled fences across the Peninsula, adapting techniques to each material's requirements.
+                    </div>
+                </details>
+                <details>
+                    <summary>How long does fence painting last near the coast?</summary>
+                    <div class="answer">
+                        With the right prep and membrane system, 8–12+ years is typical. Exposure varies by aspect and salt air proximity — we factor this into coating selection.
+                    </div>
+                </details>
+                <details>
+                    <summary>Do you repair gutters, valleys and flashing?</summary>
+                    <div class="answer">
+                        Yes — these are common leak sources. We handle flashing rebuilds, valley tray reseals and related waterpfencing across all fence types.
+                    </div>
+                </details>
+                <details>
+                    <summary>Which suburbs do you cover?</summary>
+                    <div class="answer">
+                        All of the Mornington Peninsula, including <a href="/locations/mount-eliza.html">Mount Eliza</a>, <a href="/locations/mornington.html">Mornington</a>, <a href="/locations/frankston.html">Frankston</a>, <a href="/locations/sorrento.html">Sorrento</a> and surrounding areas.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- ===== End FAQ ===== -->
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-header">
+                    <h2 class="section-title">CONTACT US</h2>
+                </div>
+                <form action="https://formspree.io/f/mjkebvdz" method="POST" class="contact-form" id="contactForm" data-formspree novalidate>
+                    <input type="hidden" name="_subject" value="New Fencing Enquiry — Website (Homepage)">
+                    <input type="hidden" name="_redirect" value="/thank-you.html">
+                    <!-- Honeypot -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   autocomplete="name" 
+                                   placeholder="Your Name"
+                                   aria-describedby="name-error">
+                            <div class="field-error" id="name-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required 
+                                   autocomplete="email"
+                                   placeholder="Email Address"
+                                   aria-describedby="email-error">
+                            <div class="field-error" id="email-error" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   autocomplete="tel"
+                                   placeholder="Phone Number"
+                                   aria-describedby="phone-error">
+                            <div class="field-error" id="phone-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service" aria-describedby="service-error">
+                                <option value="">Select a service</option>
+                                <option value="repairs">Fence Repairs</option>
+                                <option value="restoration">Fence Restoration</option>
+                                <option value="refencing">Re-Fencing</option>
+                                <option value="painting">Fence Painting</option>
+                                <option value="quote">Free Quote</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="field-error" id="service-error" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  placeholder="Tell us about your project"
+                                  aria-describedby="message-error"></textarea>
+                        <div class="field-error" id="message-error" aria-live="polite"></div>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <div class="form-success" id="formSuccess" aria-live="polite" style="display: none;">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>POPULAR SERVICES</h4>
+                    <ul>
+                        <li><a href="/services/fence-repairs.html">Fence Repairs</a></li>
+                        <li><a href="/services/fence-restoration.html">Fence Restoration</a></li>
+                        <li><a href="/services/re-fencing.html">Re-Fencing</a></li>
+                        <li><a href="/services/fence-painting.html">Fence Painting</a></li>
+                        <li><a href="/service-areas/mornington/fence-repairs-mornington.html">Fence Repairs Mornington</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT</h4>
+                    <p><a href="tel:03-4152-7766">03 4152 7766</a></p>
+                    <p>Servicing Mornington Peninsula</p>
+                </div>
+                <div class="footer-section">
+                    <h4>SERVICE AREAS</h4>
+                    <ul>
+                        <li><a href="/service-areas/mornington/">Mornington</a></li>
+                        <li><a href="/locations/mount-eliza.html">Mount Eliza</a></li>
+                        <li><a href="/locations/frankston.html">Frankston</a></li>
+                        <li><a href="/locations/sorrento.html">Sorrento</a></li>
+                        <li><a href="/locations/rosebud.html">Rosebud</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" id="locations">
+                    <h4>MORE LOCATIONS</h4>
+                    <ul class="footer-links loc-columns">
+                        <li><a href="/locations/carrum.html">Carrum</a></li>
+                        <li><a href="/locations/carrum-downs.html">Carrum Downs</a></li>
+                        <li><a href="/locations/seaford.html">Seaford</a></li>
+                        <li><a href="/locations/mount-martha.html">Mount Martha</a></li>
+                        <li><a href="/locations/cranbourne.html">Cranbourne</a></li>
+                        <li><a href="/locations/flinders.html">Flinders</a></li>
+                        <li><a href="/locations/dromana.html">Dromana</a></li>
+                        <li><a href="/locations/hampton.html">Hampton</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQPage JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How fast can you attend a fence leak?",
+                "acceptedAnswer": {"@type": "Answer","text": "We prioritise active leaks and storm damage. Same-week call-outs are common across the Peninsula — emergency tarping available within 24-48 hours when needed."}
+            },
+            {
+                "@type": "Question",
+                "name": "Should I repair, restore or re-fence?",
+                "acceptedAnswer": {"@type": "Answer","text": "It depends on fence age and condition. We inspect and price the best option. We offer fence repairs, restoration and re-fencing services tailored to your needs."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is included in a fence restoration?",
+                "acceptedAnswer": {"@type": "Answer","text": "Typically: high-pressure clean, repairs, re-bedding/re-pointing and a premium membrane system. Full scope depends on your fence's condition and material type."}
+            },
+            {
+                "@type": "Question",
+                "name": "Do you paint fences? Which colours suit coastal homes?",
+                "acceptedAnswer": {"@type": "Answer","text": "Yes — we prep and apply coatings suited to coastal conditions. Lighter greys help reduce summer heat, while darker tones suit heritage styles."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can you work with both Colorbond and tile fences?",
+                "acceptedAnswer": {"@type": "Answer","text": "Yes — we repair, restore and replace both metal (including Colorbond®) and tiled fences across the Peninsula, adapting techniques to each material's requirements."}
+            },
+            {
+                "@type": "Question",
+                "name": "How long does fence painting last near the coast?",
+                "acceptedAnswer": {"@type": "Answer","text": "With proper preparation and a membrane system, 8–12+ years is typical. Exposure varies by aspect and salt air proximity — we factor this into coating selection."}
+            },
+            {
+                "@type": "Question",
+                "name": "Do you repair gutters, valleys and flashing?",
+                "acceptedAnswer": {"@type": "Answer","text": "Yes — these are common leak sources. We handle flashing rebuilds, valley tray reseals and related waterpfencing across all fence types."}
+            },
+            {
+                "@type": "Question",
+                "name": "Which suburbs do you cover?",
+                "acceptedAnswer": {"@type": "Answer","text": "All of the Mornington Peninsula, including Mount Eliza, Mornington, Frankston, Sorrento and surrounding areas."}
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "The South East Fencer",
+      "url": "https://www.thesoutheastfencer.com.au/",
+      "telephone": "+61 3 4152 7766",
+      "email": "info@thesoutheastfencer.com.au",
+      "description": "Professional fencing solutions for 25+ years. Expert repairs, restorations, re-fencing and fence painting from across Mornington Peninsula & South-East Melbourne.",
+      "areaServed": [
+        "Mount Eliza",
+        "Mornington",
+        "Frankston", 
+        "Sorrento",
+        "Mornington Peninsula"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -38.25,
+        "longitude": 145.05
+      },
+      "openingHours": "Mo-Fr 07:00-17:00",
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      },
+      "serviceType": [
+        "Fence Repairs",
+        "Fence Restoration", 
+        "Re-Fencing",
+        "Fence Painting"
+      ]
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js" defer></script>
+    <script defer src="/assets/js/site.js"></script>
+<script defer>
+// Old navigation scripts removed - now using improved off-canvas mobile navigation
+
+// Formspree AJAX form handling
+document.addEventListener('submit', async (e) => {
+    const form = e.target.closest('form[data-formspree]');
+    if (!form) return;
+    
+    e.preventDefault();
+    
+    const btn = form.querySelector('.submit-button');
+    const successEl = form.querySelector('#formSuccess');
+    
+    // Disable button and show loading state
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    
+    try {
+        const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        });
+        
+        if (res.ok) {
+            form.reset();
+            if (successEl) {
+                successEl.style.display = 'block';
+                successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => successEl.style.display = 'none', 5000);
+            }
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        alert('Submission failed. Please try again or call us directly at 03 4152 7766.');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+    }
+});
+</script>
+</body>
+</html>
