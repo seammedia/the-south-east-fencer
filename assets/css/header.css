@@ -58,14 +58,58 @@
 /* dropdown (desktop) */
 .sef-dropdown{ position:relative; }
 .sef-drop-menu{
-  position:absolute; top:110%; left:0; background:var(--nav-bg-dark); border:1px solid var(--border);
-  border-radius:12px; min-width:220px; padding:6px; display:none; box-shadow:0 8px 28px rgba(0,0,0,.35);
+  position:absolute; top:100%; left:0;
+  background:var(--nav-bg-dark);
+  border:1px solid var(--border);
+  border-radius:12px;
+  min-width:240px;
+  padding:8px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(6px);
+  transition:opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  z-index:100;
 }
-.sef-dropdown:hover .sef-drop-menu{ display:block; }
+
+/* When dropdown is open */
+.sef-dropdown.is-open .sef-drop-menu,
+.sef-dropdown:focus-within .sef-drop-menu {
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+  transition-delay:0s;
+}
+
+/* Hover buffer - invisible bridge to prevent flicker when mouse moves between trigger and menu */
+.sef-dropdown::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:12px;
+  pointer-events:auto;
+  /* This invisible area keeps the hover chain intact */
+}
+
+/* Make toggle look active when dropdown is open */
+.sef-dropdown.is-open .sef-drop-toggle,
+.sef-dropdown:focus-within .sef-drop-toggle {
+  background:#ffffff1a;
+  color:var(--white);
+}
+
 .sef-drop-link{
-  display:block; padding:10px 12px; border-radius:8px; color:#e7eff6; text-decoration:none; font:500 14px Roboto;
+  display:block;
+  padding:11px 14px;
+  border-radius:8px;
+  color:#e7eff6;
+  text-decoration:none;
+  font:500 14px/1.4 Roboto;
+  transition:background .15s ease;
 }
-.sef-drop-link:hover{ background:#ffffff12; }
+.sef-drop-link:hover{ background:#ffffff14; color:#fff; }
 
 /* right cluster (phone + cta) */
 .sef-right{ display:flex; align-items:center; gap:10px; }
@@ -144,6 +188,19 @@
 @media (max-width: 1024px){
   .sef-links, .sef-right{ display:none; }
   .sef-hamburger{ display:flex; }
+
+  /* On mobile, dropdowns are handled by the drawer accordion - hide desktop dropdown behavior */
+  .sef-dropdown::after{ display:none; }
+  .sef-drop-menu{
+    position:static;
+    transform:none;
+    opacity:1;
+    visibility:visible;
+    box-shadow:none;
+    border:none;
+    border-radius:0;
+    padding:8px 0 0;
+  }
 }
 
 /* Body lock when menu open */
