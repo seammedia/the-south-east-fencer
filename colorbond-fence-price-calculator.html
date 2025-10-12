@@ -13,6 +13,11 @@
     <meta property="og:url" content="https://www.thesoutheastfencer.com.au/colorbond-fence-price-calculator.html">
     <meta property="og:type" content="website">
 
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+
     <style>
         :root {
             --accent: #6b8e79;
@@ -453,15 +458,138 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="/" class="logo">The South East Fencer</a>
-            <div class="header-cta">
-                <a href="tel:+61341527766" class="btn btn-outline">03 4152 7766</a>
-                <a href="/contact.html" class="btn btn-primary">Get a Quote</a>
-            </div>
+
+<!-- Shared Header -->
+<link rel="preload" href="/assets/fonts/Peace Sans Webfont.ttf" as="font" type="font/ttf" crossorigin>
+
+<header class="sef-header sef-reset" role="banner">
+  <nav class="sef-nav" aria-label="Main navigation">
+    <!-- Brand -->
+    <a class="sef-brand" href="/index.html" aria-label="The South East Fencer">
+      <span class="sef-logo">SEF</span>
+      <span class="sef-brand-title">
+        <span class="sef-sub">The Timber Fencing Specialists</span>
+        <span class="sef-main">The South East Fencer</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="sef-links" aria-label="Primary">
+      <a class="sef-link" href="/index.html" data-nav="/">Home</a>
+      <a class="sef-link" href="/about.html" data-nav="/about.html">About</a>
+
+      <div class="sef-dropdown" aria-haspopup="true">
+        <button class="sef-drop-toggle" aria-expanded="false">Services</button>
+        <div class="sef-drop-menu" role="menu">
+          <a class="sef-drop-link" href="/services/fencing-installation.html" data-nav="/services/fencing-installation.html">Fencing Installation</a>
+          <a class="sef-drop-link" href="/services/fencing-repair.html" data-nav="/services/fencing-repair.html">Fencing Repair</a>
+          <a class="sef-drop-link" href="/services/decking-retaining-walls.html" data-nav="/services/decking-retaining-walls.html">Decking &amp; Retaining Walls</a>
+          <a class="sef-drop-link" href="/services/privacy-screens.html" data-nav="/services/privacy-screens.html">Privacy Screens</a>
         </div>
-    </header>
+      </div>
+
+      <div class="sef-dropdown" aria-haspopup="true">
+        <button class="sef-drop-toggle" aria-expanded="false">Locations</button>
+        <div class="sef-drop-menu" role="menu">
+          <a class="sef-drop-link" href="/locations/carrum.html" data-nav="/locations/carrum.html">Carrum</a>
+          <a class="sef-drop-link" href="/locations/carrum-downs.html" data-nav="/locations/carrum-downs.html">Carrum Downs</a>
+          <a class="sef-drop-link" href="/service-areas/chelsea/" data-nav="/service-areas/chelsea/">Chelsea</a>
+          <a class="sef-drop-link" href="/locations/cranbourne.html" data-nav="/locations/cranbourne.html">Cranbourne</a>
+          <a class="sef-drop-link" href="/locations/dromana.html" data-nav="/locations/dromana.html">Dromana</a>
+          <a class="sef-drop-link" href="/locations/flinders.html" data-nav="/locations/flinders.html">Flinders</a>
+          <a class="sef-drop-link" href="/locations/frankston.html" data-nav="/locations/frankston.html">Frankston</a>
+          <a class="sef-drop-link" href="/service-areas/hampton/" data-nav="/service-areas/hampton/">Hampton</a>
+          <a class="sef-drop-link" href="/locations/mornington.html" data-nav="/locations/mornington.html">Mornington</a>
+          <a class="sef-drop-link" href="/locations/mount-eliza.html" data-nav="/locations/mount-eliza.html">Mount Eliza</a>
+          <a class="sef-drop-link" href="/locations/mount-martha.html" data-nav="/locations/mount-martha.html">Mount Martha</a>
+          <a class="sef-drop-link" href="/locations/rosebud.html" data-nav="/locations/rosebud.html">Rosebud</a>
+          <a class="sef-drop-link" href="/locations/seaford.html" data-nav="/locations/seaford.html">Seaford</a>
+          <a class="sef-drop-link" href="/locations/sorrento.html" data-nav="/locations/sorrento.html">Sorrento</a>
+        </div>
+      </div>
+
+      <a class="sef-link" href="/blog/" data-nav="/blog/">Blog</a>
+      <a class="sef-link" href="/contact.html" data-nav="/contact.html">Contact</a>
+    </div>
+
+    <!-- Desktop right -->
+    <div class="sef-right">
+      <a class="sef-phone" href="tel:+61341527766">03 4152 7766</a>
+      <a class="sef-cta" href="/contact.html">Get Quote</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="sef-open" class="sef-hamburger" aria-label="Open menu" aria-controls="sef-drawer">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+</header>
+
+<!-- Off-canvas + Overlay -->
+<div class="sef-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<aside id="sef-drawer" class="sef-drawer" aria-hidden="true" aria-label="Mobile menu" role="dialog">
+  <div class="sef-drawer-head">
+    <div class="sef-brand-title">
+      <span class="sef-sub">The Timber Fencing Specialists</span>
+      <span class="sef-main" style="font-family:'Peace Sans','Peace Sans Webfont',impact,sans-serif;">The South East Fencer</span>
+    </div>
+    <button id="sef-close" class="sef-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <nav class="sef-drawer-nav">
+    <a class="sef-drawer-link" href="/index.html" data-nav="/">Home</a>
+    <a class="sef-drawer-link" href="/about.html" data-nav="/about.html">About</a>
+
+    <!-- Services accordion -->
+    <div class="sef-drawer-accordion">
+      <button class="sef-drawer-accordion-btn" aria-expanded="false">
+        Services
+        <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+      </button>
+      <div class="sef-acc-panel">
+        <a class="sef-acc-link" href="/services/fencing-installation.html" data-nav="/services/fencing-installation.html">Fencing Installation</a>
+        <a class="sef-acc-link" href="/services/fencing-repair.html" data-nav="/services/fencing-repair.html">Fencing Repair</a>
+        <a class="sef-acc-link" href="/services/decking-retaining-walls.html" data-nav="/services/decking-retaining-walls.html">Decking &amp; Retaining Walls</a>
+        <a class="sef-acc-link" href="/services/privacy-screens.html" data-nav="/services/privacy-screens.html">Privacy Screens</a>
+      </div>
+    </div>
+
+    <!-- Locations accordion -->
+    <div class="sef-drawer-accordion">
+      <button class="sef-drawer-accordion-btn" aria-expanded="false">
+        Locations
+        <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+      </button>
+      <div class="sef-acc-panel">
+        <a class="sef-acc-link" href="/locations/carrum.html" data-nav="/locations/carrum.html">Carrum</a>
+        <a class="sef-acc-link" href="/locations/carrum-downs.html" data-nav="/locations/carrum-downs.html">Carrum Downs</a>
+        <a class="sef-acc-link" href="/service-areas/chelsea/" data-nav="/service-areas/chelsea/">Chelsea</a>
+        <a class="sef-acc-link" href="/locations/cranbourne.html" data-nav="/locations/cranbourne.html">Cranbourne</a>
+        <a class="sef-acc-link" href="/locations/dromana.html" data-nav="/locations/dromana.html">Dromana</a>
+        <a class="sef-acc-link" href="/locations/flinders.html" data-nav="/locations/flinders.html">Flinders</a>
+        <a class="sef-acc-link" href="/locations/frankston.html" data-nav="/locations/frankston.html">Frankston</a>
+        <a class="sef-acc-link" href="/service-areas/hampton/" data-nav="/service-areas/hampton/">Hampton</a>
+        <a class="sef-acc-link" href="/locations/mornington.html" data-nav="/locations/mornington.html">Mornington</a>
+        <a class="sef-acc-link" href="/locations/mount-eliza.html" data-nav="/locations/mount-eliza.html">Mount Eliza</a>
+        <a class="sef-acc-link" href="/locations/mount-martha.html" data-nav="/locations/mount-martha.html">Mount Martha</a>
+        <a class="sef-acc-link" href="/locations/rosebud.html" data-nav="/locations/rosebud.html">Rosebud</a>
+        <a class="sef-acc-link" href="/locations/seaford.html" data-nav="/locations/seaford.html">Seaford</a>
+        <a class="sef-acc-link" href="/locations/sorrento.html" data-nav="/locations/sorrento.html">Sorrento</a>
+      </div>
+    </div>
+
+    <a class="sef-drawer-link" href="/blog/" data-nav="/blog/">Blog</a>
+    <a class="sef-drawer-link" href="/contact.html" data-nav="/contact.html">Contact</a>
+  </nav>
+
+  <div class="sef-drawer-footer">
+    <a class="sef-drawer-phone" href="tel:+61341527766">03 4152 7766</a>
+    <a class="sef-drawer-cta" href="/contact.html">Get Quote</a>
+  </div>
+</aside>
 
     <section class="hero">
         <div class="container">
@@ -993,10 +1121,114 @@
 
         let projectType = 'supply'; // 'supply' or 'installed'
 
+        // Parameter mapping: short keys for sharing, long keys for readability
+        const PARAM_MAP = {
+            'l': 'length',
+            'h': 'height',
+            'p': 'profile',
+            'f': 'finish',
+            'pr': 'postsRails',
+            'c': 'corners',
+            'sg': 'singleGates',
+            'dg': 'doubleGates',
+            'r': 'region',
+            't': 'terrain',
+            'rm': 'removal',
+            'ty': 'type'
+        };
+
+        // Read parameters from URL (supports both short and long keys)
+        function readParams() {
+            const params = new URLSearchParams(window.location.search);
+            const state = {};
+
+            // Try both short and long keys
+            for (const [shortKey, longKey] of Object.entries(PARAM_MAP)) {
+                const value = params.get(shortKey) || params.get(longKey);
+                if (value !== null) {
+                    // Coerce types
+                    if (longKey === 'postsRails' || longKey === 'removal') {
+                        state[longKey] = value === '1' || value === 'true';
+                    } else if (longKey === 'length' || longKey === 'height') {
+                        state[longKey] = parseFloat(value);
+                    } else if (longKey === 'corners' || longKey === 'singleGates' || longKey === 'doubleGates') {
+                        state[longKey] = parseInt(value) || 0;
+                    } else {
+                        state[longKey] = value;
+                    }
+                }
+            }
+
+            return state;
+        }
+
+        // Apply state to UI inputs
+        function applyStateToUI(state) {
+            if (state.length !== undefined) document.getElementById('length').value = state.length;
+            if (state.height !== undefined) document.getElementById('height').value = state.height;
+            if (state.profile !== undefined) document.getElementById('profile').value = state.profile;
+            if (state.finish !== undefined) document.getElementById('finish').value = state.finish;
+            if (state.postsRails !== undefined) document.getElementById('postsRails').checked = state.postsRails;
+            if (state.corners !== undefined) document.getElementById('corners').value = state.corners;
+            if (state.singleGates !== undefined) document.getElementById('singleGates').value = state.singleGates;
+            if (state.doubleGates !== undefined) document.getElementById('doubleGates').value = state.doubleGates;
+            if (state.region !== undefined) document.getElementById('region').value = state.region;
+            if (state.terrain !== undefined) document.getElementById('terrain').value = state.terrain;
+            if (state.removal !== undefined) document.getElementById('removal').checked = state.removal;
+
+            if (state.type !== undefined) {
+                projectType = state.type;
+                document.querySelectorAll('.toggle-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.type === projectType);
+                });
+            }
+        }
+
+        // Build short-key querystring for sharing
+        function buildShortShareQuery(state) {
+            const params = new URLSearchParams();
+
+            // Reverse map to get short keys
+            const reverseMap = Object.entries(PARAM_MAP).reduce((acc, [short, long]) => {
+                acc[long] = short;
+                return acc;
+            }, {});
+
+            for (const [key, value] of Object.entries(state)) {
+                const shortKey = reverseMap[key] || key;
+                if (typeof value === 'boolean') {
+                    params.set(shortKey, value ? '1' : '0');
+                } else {
+                    params.set(shortKey, String(value));
+                }
+            }
+
+            return '?' + params.toString();
+        }
+
+        // Get current state from UI
+        function getCurrentState() {
+            return {
+                length: parseFloat(document.getElementById('length').value) || 20,
+                height: parseFloat(document.getElementById('height').value) || 1.8,
+                profile: document.getElementById('profile').value,
+                finish: document.getElementById('finish').value,
+                postsRails: document.getElementById('postsRails').checked,
+                corners: parseInt(document.getElementById('corners').value) || 0,
+                singleGates: parseInt(document.getElementById('singleGates').value) || 0,
+                doubleGates: parseInt(document.getElementById('doubleGates').value) || 0,
+                region: document.getElementById('region').value,
+                terrain: document.getElementById('terrain').value,
+                removal: document.getElementById('removal').checked,
+                type: projectType
+            };
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             // Load from URL params if present
-            loadFromURL();
+            const state = readParams();
+            applyStateToUI(state);
 
             // Set up toggle buttons
             document.querySelectorAll('.toggle-btn').forEach(btn => {
@@ -1016,6 +1248,9 @@
 
             // Initial calculation
             calculate();
+
+            // Strip params from URL after loading
+            history.replaceState(null, '', location.pathname);
         });
 
         function calculate() {
@@ -1148,9 +1383,6 @@
                 <td><strong>$${total.toFixed(2)}</strong></td>
             `;
 
-            // Update URL
-            updateURL();
-
             // Track with GA (if available)
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'calculator_use', {
@@ -1161,74 +1393,101 @@
             }
         }
 
-        function updateURL() {
-            const params = new URLSearchParams();
-            params.set('length', document.getElementById('length').value);
-            params.set('height', document.getElementById('height').value);
-            params.set('profile', document.getElementById('profile').value);
-            params.set('finish', document.getElementById('finish').value);
-            params.set('postsRails', document.getElementById('postsRails').checked ? '1' : '0');
-            params.set('corners', document.getElementById('corners').value);
-            params.set('singleGates', document.getElementById('singleGates').value);
-            params.set('doubleGates', document.getElementById('doubleGates').value);
-            params.set('region', document.getElementById('region').value);
-            params.set('terrain', document.getElementById('terrain').value);
-            params.set('removal', document.getElementById('removal').checked ? '1' : '0');
-            params.set('type', projectType);
-
-            const newUrl = window.location.pathname + '?' + params.toString();
-            window.history.replaceState({}, '', newUrl);
-        }
-
-        function loadFromURL() {
-            const params = new URLSearchParams(window.location.search);
-
-            if (params.has('length')) document.getElementById('length').value = params.get('length');
-            if (params.has('height')) document.getElementById('height').value = params.get('height');
-            if (params.has('profile')) document.getElementById('profile').value = params.get('profile');
-            if (params.has('finish')) document.getElementById('finish').value = params.get('finish');
-            if (params.has('postsRails')) document.getElementById('postsRails').checked = params.get('postsRails') === '1';
-            if (params.has('corners')) document.getElementById('corners').value = params.get('corners');
-            if (params.has('singleGates')) document.getElementById('singleGates').value = params.get('singleGates');
-            if (params.has('doubleGates')) document.getElementById('doubleGates').value = params.get('doubleGates');
-            if (params.has('region')) document.getElementById('region').value = params.get('region');
-            if (params.has('terrain')) document.getElementById('terrain').value = params.get('terrain');
-            if (params.has('removal')) document.getElementById('removal').checked = params.get('removal') === '1';
-
-            if (params.has('type')) {
-                projectType = params.get('type');
-                document.querySelectorAll('.toggle-btn').forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.type === projectType);
-                });
-            }
-        }
-
         function sendToQuote() {
             const total = document.getElementById('totalCost').textContent;
             const perMetre = document.getElementById('perMetreCost').textContent;
-            const url = window.location.href;
 
-            const message = `Hi, I used your Colorbond fence calculator and got an estimate of ${total} (${perMetre}). Can you provide a formal quote? Calculator link: ${url}`;
+            // Build short URL for quote message
+            const currentState = getCurrentState();
+            const qs = buildShortShareQuery(currentState);
+            const shareUrl = location.origin + location.pathname + qs;
+
+            const message = `Hi, I used your Colorbond fence calculator and got an estimate of ${total} (${perMetre}). Can you provide a formal quote? Calculator link: ${shareUrl}`;
 
             window.location.href = `/contact.html?message=${encodeURIComponent(message)}`;
         }
 
         function shareEstimate() {
-            const url = window.location.href;
+            // Build short-key URL with current state
+            const currentState = getCurrentState();
+            const qs = buildShortShareQuery(currentState);
+            const shareUrl = location.origin + location.pathname + qs;
 
+            // Try native share API first
             if (navigator.share) {
                 navigator.share({
                     title: 'Colorbond Fence Price Estimate',
                     text: 'Check out my Colorbond fence price estimate',
-                    url: url
+                    url: shareUrl
+                }).catch(() => {
+                    // If share fails, fall back to clipboard
+                    copyToClipboard(shareUrl);
                 });
             } else {
                 // Fallback: copy to clipboard
-                navigator.clipboard.writeText(url).then(() => {
-                    alert('Link copied to clipboard! You can share this estimate with others.');
-                });
+                copyToClipboard(shareUrl);
             }
         }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Link copied to clipboard!');
+            }).catch(() => {
+                // Older browser fallback
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('Link copied to clipboard!');
+            });
+        }
+
+        function showToast(message) {
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 32px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #333;
+                color: #fff;
+                padding: 12px 24px;
+                border-radius: 4px;
+                font-size: 14px;
+                z-index: 9999;
+                animation: fadeInOut 3s ease-in-out;
+            `;
+
+            // Add animation keyframes if not already present
+            if (!document.getElementById('toast-animation')) {
+                const style = document.createElement('style');
+                style.id = 'toast-animation';
+                style.textContent = `
+                    @keyframes fadeInOut {
+                        0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+                        10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                        90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                        100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(toast);
+
+            // Remove after animation
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 3000);
+        }
     </script>
+
+    <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
