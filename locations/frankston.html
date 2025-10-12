@@ -93,6 +93,18 @@
     .btn:hover,.btn:focus-visible{filter:brightness(.95);outline:2px solid var(--accent);outline-offset:2px}
     @media (max-width:900px){.two-col{grid-template-columns:1fr;gap:24px}}
 
+    /* Services Grid */
+    .services-section{padding:64px 20px;background:#fafafa}
+    .services-section h2{text-align:center;font-size:clamp(24px,3vw,36px);color:var(--ink);margin-bottom:48px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+    .service-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;transition:box-shadow 0.3s ease}
+    .service-card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+    .service-card.primary{border:2px solid var(--accent)}
+    .service-card h3{color:var(--ink);font-size:1.3rem;margin-bottom:12px}
+    .service-card p{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-bottom:16px}
+    .service-card a{color:var(--accent);text-decoration:none;font-weight:500;font-size:0.9rem}
+    .service-card a:hover{text-decoration:underline}
+
     /* Footer */
     .footer {
         background-color: #f8f9fa;
@@ -320,6 +332,37 @@
     </div>
   </main>
 
+  <section class="services-section">
+    <h2>Related Services in Frankston</h2>
+    <div class="services-grid">
+      <div class="service-card primary">
+        <h3>Fencing Installation Frankston</h3>
+        <p>New fences in timber, Hampton style, Colorbond and pool compliance—built for coastal conditions in Frankston.</p>
+        <a href="/service-areas/frankston/fencing-installation-frankston.html">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <h3>Fencing Repair Frankston</h3>
+        <p>Fast, reliable repairs for storm damage, leaning posts, broken rails and panels.</p>
+        <a href="/service-areas/frankston/fencing-repair-frankston.html">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <h3>Decking & Retaining Walls Frankston</h3>
+        <p>Hard-wearing decks and practical retaining solutions to manage levels and drainage.</p>
+        <a href="/service-areas/frankston/decking-retaining-walls-frankston.html">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <h3>Privacy Screens Frankston</h3>
+        <p>Slatted timber and aluminium privacy options that match your home and fence.</p>
+        <a href="/service-areas/frankston/privacy-screens-frankston.html">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <h3>Colorbond Fencing Frankston</h3>
+        <p>Durable, low-maintenance Colorbond fencing with modern colours and clean lines.</p>
+        <a href="/service-areas/frankston/colorbond-fencing-frankston.html">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
         <div class="footer-content">
@@ -410,6 +453,19 @@
   "email":"info@thesoutheastfencer.com.au",
   "areaServed":"Frankston",
   "address":{"@type":"PostalAddress","addressRegion":"VIC","addressCountry":"AU"}
+}
+</script>
+
+<!-- JSON-LD BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thesoutheastfencer.com.au/"},
+    {"@type":"ListItem","position":2,"name":"Locations","item":"https://www.thesoutheastfencer.com.au/locations/"},
+    {"@type":"ListItem","position":3,"name":"Frankston","item":"https://www.thesoutheastfencer.com.au/locations/frankston.html"}
+  ]
 }
 </script>
 </body>
