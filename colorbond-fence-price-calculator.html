@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorbond Fence Price Calculator (VIC) – Per Metre & Installed Cost | The South East Fencer</title>
+    <meta name="description" content="Get instant Colorbond fence cost estimates for Melbourne & the Mornington Peninsula. Per-metre prices, supply-only vs installed, 1.5–2.4 m heights, gates, plinths, terrain & coastal surcharges. Free calculator + FAQs.">
+    <link rel="canonical" href="https://www.thesoutheastfencer.com.au/colorbond-fence-price-calculator.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Colorbond Fence Price Calculator (VIC) – Get Instant Estimates">
+    <meta property="og:description" content="Free Colorbond fencing cost calculator for Melbourne. Calculate supply-only or installed prices per metre with gates, plinths, terrain factors.">
+    <meta property="og:url" content="https://www.thesoutheastfencer.com.au/colorbond-fence-price-calculator.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --accent: #6b8e79;
+            --ink: #1a1a1a;
+            --muted: #666;
+            --border: #e5e5e5;
+            --bg-light: #fafafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--ink);
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #5a7868;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 22px;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #6b8e79 0%, #5a7868 100%);
+            color: #fff;
+            padding: 48px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 24px;
+            opacity: 0.95;
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            padding: 60px 20px;
+            background: var(--bg-light);
+        }
+
+        .calculator-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .calculator-inputs {
+            padding: 40px;
+            border-right: 1px solid var(--border);
+        }
+
+        .calculator-outputs {
+            padding: 40px;
+            background: var(--bg-light);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+
+        input[type="number"],
+        input[type="range"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(107, 142, 121, 0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 8px;
+            background: var(--border);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: #fff;
+            color: var(--accent);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Results */
+        .result-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .result-total {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .result-per-metre {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .breakdown-table th,
+        .breakdown-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breakdown-table th {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .breakdown-table tr:last-child td {
+            border-bottom: none;
+            font-weight: 700;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            border: 1px solid var(--border);
+            color: var(--ink);
+            padding: 10px 20px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+        }
+
+        /* Assumptions */
+        .assumptions {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            padding: 16px;
+            margin-top: 24px;
+            font-size: 14px;
+        }
+
+        .assumptions summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #856404;
+        }
+
+        .assumptions ul {
+            margin-top: 12px;
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .assumptions li {
+            margin-bottom: 4px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 20px;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .content-section h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: var(--ink);
+        }
+
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 20px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item summary {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-item summary:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--muted);
+        }
+
+        /* People Also Ask */
+        .paa-section {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+
+        .paa-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .paa-list {
+            list-style: none;
+        }
+
+        .paa-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .paa-list li:last-child {
+            border-bottom: none;
+        }
+
+        .paa-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .paa-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-inputs {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .header-cta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media print {
+            header, .action-buttons, .assumptions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">The South East Fencer</a>
+            <div class="header-cta">
+                <a href="tel:+61341527766" class="btn btn-outline">03 4152 7766</a>
+                <a href="/contact.html" class="btn btn-primary">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Colorbond Fence Price Calculator</h1>
+            <p>Get instant cost estimates for your Colorbond fencing project in Melbourne & the Mornington Peninsula. Calculate supply-only or installed prices with gates, plinths, terrain factors and more.</p>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="calculator-wrapper">
+            <div class="calculator-grid">
+                <!-- Left Column: Inputs -->
+                <div class="calculator-inputs">
+                    <h2 style="margin-bottom: 24px;">Project Details</h2>
+
+                    <div class="form-group">
+                        <label for="length">Fence Length (metres)</label>
+                        <input type="number" id="length" value="20" min="1" max="500" step="0.5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">Fence Height</label>
+                        <select id="height">
+                            <option value="1.5">1.5m</option>
+                            <option value="1.8" selected>1.8m (Standard)</option>
+                            <option value="2.1">2.1m</option>
+                            <option value="2.4">2.4m</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile">Profile Type</label>
+                        <select id="profile">
+                            <option value="standard" selected>Standard</option>
+                            <option value="plinth1">Plinth (1 row)</option>
+                            <option value="plinth2">Double Plinth (2 rows)</option>
+                            <option value="lattice">Lattice Top</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="finish">Finish Quality</label>
+                        <select id="finish">
+                            <option value="standard" selected>Standard Colorbond</option>
+                            <option value="premium">Premium/Ultra (Coastal)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="postsRails" checked>
+                        <label for="postsRails">Include Posts & Rails</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="corners">Number of Corners/End Posts</label>
+                        <input type="number" id="corners" value="2" min="0" max="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="singleGates">Single Gates (0-10)</label>
+                        <input type="number" id="singleGates" value="0" min="0" max="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doubleGates">Double Gates (0-5)</label>
+                        <input type="number" id="doubleGates" value="0" min="0" max="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Region</label>
+                        <select id="region">
+                            <option value="se-melb" selected>SE Melbourne / Mornington Peninsula</option>
+                            <option value="greater-melb">Greater Melbourne</option>
+                            <option value="other-vic">Other VIC</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="terrain">Terrain Difficulty</label>
+                        <select id="terrain">
+                            <option value="easy">Easy (flat, accessible)</option>
+                            <option value="standard" selected>Standard</option>
+                            <option value="complex">Complex (+12% - sloped/rocky)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="removal">
+                        <label for="removal">Old Fence Removal Required</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-bottom: 12px;">Project Type</label>
+                        <div class="toggle-group">
+                            <button type="button" class="toggle-btn" data-type="installed">Installed</button>
+                            <button type="button" class="toggle-btn active" data-type="supply">Supply Only</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Outputs -->
+                <div class="calculator-outputs">
+                    <h2 style="margin-bottom: 24px;">Cost Estimate</h2>
+
+                    <div class="result-card">
+                        <div class="result-total" id="totalCost">$3,430</div>
+                        <div class="result-per-metre" id="perMetreCost">$171.50 per metre</div>
+
+                        <h3 style="margin-bottom: 16px;">Price Breakdown</h3>
+                        <table class="breakdown-table" id="breakdownTable">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Ex-GST</th>
+                                    <th>Incl-GST</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="sendToQuote()">Send to Quote</button>
+                        <button class="btn btn-secondary" onclick="window.print()">Print Estimate</button>
+                        <button class="btn btn-secondary" onclick="shareEstimate()">Share Link</button>
+                    </div>
+
+                    <details class="assumptions">
+                        <summary>📋 Pricing Assumptions</summary>
+                        <ul>
+                            <li>Prices based on 2025 VIC market rates (ex-GST shown)</li>
+                            <li>Standard bay spacing ~2.4m between posts</li>
+                            <li>Marine-grade 316 stainless steel fixings for coastal areas</li>
+                            <li>Council permits & inspections not included</li>
+                            <li>Assumes standard soil conditions (rocky/clay may vary)</li>
+                            <li>Final quote subject to site inspection</li>
+                            <li>10-year workmanship warranty included (installed)</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-section">
+        <div class="container">
+            <h2>What's a Fair Colorbond Fence Price Per Metre in Melbourne?</h2>
+            <p>
+                In 2025, expect to pay <strong>$120–$180 per metre</strong> for supply-only Colorbond fencing materials (1.8m height, standard finish), and <strong>$180–$260 per metre installed</strong> in Melbourne and the Mornington Peninsula. Prices vary based on height, profile type (plinths, lattice), coastal exposure requiring premium finishes, and terrain complexity. Gate additions, old fence removal, and difficult access can add $12–$50 per metre to the base cost.
+            </p>
+            <p>
+                Our calculator provides transparent pricing that reflects real 2025 Victorian market rates, including marine-grade fixings for coastal properties, GST-inclusive totals, and optional extras like plinths ($42–$84 per bay) and gates ($310–$620 supply-only). Always request an on-site quote to confirm final pricing based on your property's specific conditions, soil type, and council requirements.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Colorbond Fence Height Comparison: 1.5m vs 1.8m vs 2.1m vs 2.4m</h2>
+            <p>
+                Choosing the right fence height depends on your privacy needs, council regulations, and budget. Here's how Colorbond fence heights compare for a typical 20-metre fence in Melbourne:
+            </p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Height</th>
+                        <th>Best For</th>
+                        <th>Supply Cost (20m)</th>
+                        <th>Installed Cost (20m)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1.5m</strong></td>
+                        <td>Front boundaries, low-privacy areas, budget projects</td>
+                        <td>$2,160–$2,880</td>
+                        <td>$3,240–$4,320</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1.8m</strong></td>
+                        <td>Standard residential (most common), rear/side boundaries</td>
+                        <td>$2,400–$3,200</td>
+                        <td>$3,600–$4,800</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.1m</strong></td>
+                        <td>Enhanced privacy, screening overlooking, taller homes</td>
+                        <td>$2,880–$3,840</td>
+                        <td>$4,320–$5,760</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.4m</strong></td>
+                        <td>Maximum privacy, commercial, pool compliance (check local codes)</td>
+                        <td>$3,240–$4,320</td>
+                        <td>$4,860–$6,480</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <strong>Council height limits in Victoria:</strong> Most councils permit 2.0m fences on rear/side boundaries without a permit, and 1.2m–1.5m on front boundaries. Always check your local council regulations before selecting fence height. Taller fences may require engineer certification for wind loading, especially in coastal areas like the Mornington Peninsula.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Colorbond Fencing vs Bunnings DIY Kits: Which is Better Value?</h2>
+            <p>
+                Bunnings and hardware stores sell Colorbond fence panel kits for $90–$140 per 2.4m panel (supply-only), which seems cheaper than professional installation at $180–$260 per metre. However, DIY Colorbond fencing requires significant skill, tools (post hole digger, spirit level, drill, concrete mixer), and time—expect 2–3 full weekends for a 20-metre fence.
+            </p>
+            <p>
+                Professional installation includes accurate measurement, laser-level alignment, compliant post depth (600–900mm in VIC), marine-grade fixings for coastal areas, warranty coverage, and council-ready workmanship. DIY mistakes—uneven posts, incorrect spacing, or weak footings—can cost more to fix than the original savings. For complex terrain, sloped blocks, or properties near the coast, professional installation delivers better long-term value and peace of mind.
+            </p>
+            <p>
+                <strong>When DIY makes sense:</strong> Flat, accessible sites with simple straight runs, if you have fencing experience and own the necessary tools. <strong>When to hire a pro:</strong> Sloped terrain, coastal exposure, corners/gates, pool fencing compliance, or when you value time and warranty protection.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Coastal & Bushfire Considerations for Colorbond Fencing</h2>
+            <p>
+                Properties within 5km of the coast (common across the Mornington Peninsula, Frankston, and bayside Melbourne) face accelerated corrosion from salt spray. Upgrade to <strong>premium Colorbond finishes</strong> (Ultra or Marine-grade steel) and mandate <strong>316 stainless steel fixings</strong> (not standard zinc-plated screws). Premium finishes add 10% to material costs but extend fence life from 20–25 years to 35–40+ years in coastal conditions.
+            </p>
+            <p>
+                Bushfire-prone areas (BAL zones in Victoria) require non-combustible fencing materials. Colorbond steel fencing meets bushfire compliance for <strong>BAL-12.5 to BAL-40 zones</strong>, unlike timber. Confirm BAL rating requirements with your local council and ensure installers use ember-resistant seals at ground level and post interfaces. Some councils mandate specific post types (steel vs timber) for bushfire zones—check before purchasing materials.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Gates, Plinths, Retaining Walls & Other Add-Ons</h2>
+            <p>
+                <strong>Gates:</strong> Single Colorbond gates (1m wide) cost $310–$450 supply-only, plus $130–$180 installation. Double gates (2.4m+ wide) run $620–$850 supply-only, plus $220–$300 installation. Include self-closing hinges ($40–$80) for pool compliance, and D-latches or lockable handles.
+            </p>
+            <p>
+                <strong>Plinths:</strong> Decorative concrete or steel plinths (100–200mm high) add $42 per bay for single-row designs, $84 per bay for double-row (stacked). Plinths protect fence panels from ground moisture, enhance visual appeal, and suit sloped blocks. Popular in Hampton-style and modern estates.
+            </p>
+            <p>
+                <strong>Lattice tops:</strong> Add 300–600mm of decorative lattice above solid panels for airflow and aesthetics—costs $75 per bay supply-only. Reduces wind load and softens the fence's visual mass.
+            </p>
+            <p>
+                <strong>Retaining wall interfaces:</strong> Fencing on top of retaining walls (sleeper, concrete, or engineered systems) requires custom post mounting brackets and engineer certification if the combined height exceeds 2.4m. Expect $150–$300 extra per post for bracket installation and compliance checks.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Lead Times, Council Permits & Project Timeline</h2>
+            <p>
+                <strong>Lead times:</strong> Standard Colorbond fencing materials are typically in stock, with 1–2 week lead times in Melbourne. Custom colors (beyond the popular Monument, Basalt, Woodland Grey) or premium Ultra finishes may add 2–4 weeks. Installation scheduling depends on contractor availability—book 3–6 weeks ahead in peak season (September–March).
+            </p>
+            <p>
+                <strong>Council permits:</strong> In Victoria, fencing on rear/side boundaries up to 2.0m height generally doesn't require a planning permit, but front fences over 1.2m–1.5m (varies by council) do. Boundary fencing disputes fall under the <em>Fences Act 1968</em>—notify adjoining owners in writing before commencing work. Pool fencing must comply with AS1926.1-2012 regardless of council permits.
+            </p>
+            <p>
+                <strong>Typical project timeline:</strong> Site inspection and quote (1–3 days), material ordering (1–2 weeks), installation for 20m fence (1–2 days). Add 1–2 weeks if old fence removal, terrain leveling, or permit applications are required.
+            </p>
+        </div>
+    </section>
+
+    <!-- People Also Ask -->
+    <section class="content-section">
+        <div class="container">
+            <div class="paa-section">
+                <h3>People Also Ask</h3>
+                <ul class="paa-list">
+                    <li><a href="#faq">How much does a 20-metre Colorbond fence cost installed?</a></li>
+                    <li><a href="#faq">What's the cheapest Colorbond fence height?</a></li>
+                    <li><a href="#faq">Do I need a permit for a 1.8m Colorbond fence in Victoria?</a></li>
+                    <li><a href="#faq">How long does Colorbond fencing last near the coast?</a></li>
+                    <li><a href="#faq">Can I install Colorbond fencing myself?</a></li>
+                    <li><a href="#faq">What's the difference between good-neighbour and standard Colorbond fencing?</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 style="margin-bottom: 32px;">Frequently Asked Questions</h2>
+
+            <details class="faq-item">
+                <summary>How much does a 20-metre Colorbond fence cost installed in Melbourne?</summary>
+                <div class="faq-answer">
+                    A 20-metre standard 1.8m Colorbond fence costs <strong>$3,600–$5,200 installed</strong> in Melbourne (2025 pricing). This includes materials, posts, rails, concrete footings, and labor. Add $240–$400 for old fence removal, $310–$450 per single gate, and 10% premium for coastal-grade finishes in bayside or Mornington Peninsula areas. Complex terrain or sloped blocks may add 5–12% to the base cost.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What's the cheapest Colorbond fence height?</summary>
+                <div class="faq-answer">
+                    The cheapest Colorbond fence height is <strong>1.5m</strong>, costing $108–$162 per metre supply-only, or $162–$216 per metre installed. However, 1.8m is the most popular height for rear/side boundaries, offering better privacy and value for only $12–$18 more per metre. Front fences often use 1.2m–1.5m to comply with council regulations and avoid permit requirements.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do I need a permit for a 1.8m Colorbond fence in Victoria?</summary>
+                <div class="faq-answer">
+                    In most Victorian councils, you <strong>do not need a permit</strong> for a 1.8m fence on rear or side boundaries. Front fences are typically limited to 1.2m–1.5m without a permit (varies by council). Always check your local council's planning scheme before construction. Pool fencing requires compliance with AS1926.1-2012 regardless of height or location, and boundary fencing must follow the <em>Fences Act 1968</em> notification rules.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How long does Colorbond fencing last near the coast?</summary>
+                <div class="faq-answer">
+                    Standard Colorbond fencing lasts <strong>20–25 years</strong> near the coast, while premium/Ultra finishes with marine-grade 316 stainless steel fixings last <strong>35–40+ years</strong>. Coastal properties within 5km of the ocean should mandate 316 SS fixings (not zinc-plated) and consider premium Colorbond steel for extended life. Regular rinsing (every 6–12 months) removes salt buildup and prevents premature corrosion.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I install Colorbond fencing myself?</summary>
+                <div class="faq-answer">
+                    Yes, experienced DIYers can install Colorbond fencing using panel kits from Bunnings or hardware stores ($90–$140 per 2.4m panel). However, it requires post hole digging (600–900mm depth), concrete mixing, laser-level alignment, and proper spacing. Expect 2–3 full weekends for a 20-metre fence. Professional installation ensures compliance, warranty coverage, and saves time—especially important for sloped terrain, coastal areas, or pool fencing compliance.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What's the difference between good-neighbour and standard Colorbond fencing?</summary>
+                <div class="faq-answer">
+                    <strong>Good-neighbour (double-sided) Colorbond fencing</strong> shows the finished side to both properties, with posts and rails sandwiched between panels. <strong>Standard (single-sided) fencing</strong> shows panels on one side and posts/rails on the other. Good-neighbour fencing costs $10–$20 more per metre but provides a symmetrical appearance and shared aesthetic appeal. It's often preferred for boundary fences in modern estates and suburban Melbourne.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What are the most popular Colorbond fence colors in Melbourne?</summary>
+                <div class="faq-answer">
+                    The most popular Colorbond fence colors in Melbourne are <strong>Monument®</strong> (charcoal grey), <strong>Basalt®</strong> (deep grey-black), and <strong>Woodland Grey®</strong> (mid-grey). These neutral tones complement most home styles, hide dirt well, and maintain visual appeal over time. Coastal properties often choose <strong>Surfmist®</strong> (off-white) or <strong>Evening Haze®</strong> (grey-blue) for brightness and heat reduction. Avoid dark colors in full sun exposure areas, as they absorb more heat.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How much does it cost to remove an old fence before installing Colorbond?</summary>
+                <div class="faq-answer">
+                    Old fence removal costs <strong>$12–$20 per metre</strong> in Melbourne, depending on material type (timber, wire, or old Colorbond), post depth, and disposal requirements. A typical 20-metre fence removal costs $240–$400. Concrete post removal adds $30–$60 per post if footings are deep or heavily reinforced. Most professional Colorbond installers include removal as an optional add-on, bundling it with the installation quote for convenience.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Are plinths necessary for Colorbond fencing?</summary>
+                <div class="faq-answer">
+                    Plinths are <strong>not necessary</strong> but offer practical and aesthetic benefits. A 100–200mm concrete or steel plinth protects Colorbond panels from ground moisture, soil contact, and mower damage, extending fence life. Plinths also suit sloped blocks where panels would otherwise sit at varying heights. They add <strong>$42–$84 per bay</strong> to the cost and are popular in Hampton-style fencing and modern estates for a refined, elevated appearance.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What's included in a professional Colorbond fence installation quote?</summary>
+                <div class="faq-answer">
+                    A professional Colorbond fence installation quote typically includes: site measurement, Colorbond steel panels (chosen height and color), galvanized or 316 SS posts and rails, concrete footings (600–900mm depth), top capping, hardware (screws, brackets), labor, and workmanship warranty (5–10 years). <strong>Not included:</strong> council permits, old fence removal (unless specified), gates, retaining wall interfaces, or unforeseen site complications (rock, clay). Always request an itemized quote and on-site inspection before accepting.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="background: var(--accent); color: #fff; text-align: center;">
+        <div class="container">
+            <h2 style="color: #fff; margin-bottom: 16px;">Ready to Get an Accurate Quote?</h2>
+            <p style="color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 32px;">
+                Our calculator provides estimates, but every property is unique. Contact us for a free on-site inspection and detailed quote tailored to your project in Melbourne or the Mornington Peninsula.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/contact.html" class="btn" style="background: #fff; color: var(--accent);">Get a Free Quote</a>
+                <a href="tel:+61341527766" class="btn btn-outline" style="border-color: #fff; color: #fff;">Call 03 4152 7766</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.thesoutheastfencer.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Colorbond Fence Price Calculator",
+          "item": "https://www.thesoutheastfencer.com.au/colorbond-fence-price-calculator.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a 20-metre Colorbond fence cost installed in Melbourne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 20-metre standard 1.8m Colorbond fence costs $3,600–$5,200 installed in Melbourne (2025 pricing). This includes materials, posts, rails, concrete footings, and labor. Add $240–$400 for old fence removal, $310–$450 per single gate, and 10% premium for coastal-grade finishes in bayside or Mornington Peninsula areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the cheapest Colorbond fence height?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cheapest Colorbond fence height is 1.5m, costing $108–$162 per metre supply-only, or $162–$216 per metre installed. However, 1.8m is the most popular height for rear/side boundaries, offering better privacy and value for only $12–$18 more per metre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit for a 1.8m Colorbond fence in Victoria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most Victorian councils, you do not need a permit for a 1.8m fence on rear or side boundaries. Front fences are typically limited to 1.2m–1.5m without a permit (varies by council). Always check your local council's planning scheme before construction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does Colorbond fencing last near the coast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard Colorbond fencing lasts 20–25 years near the coast, while premium/Ultra finishes with marine-grade 316 stainless steel fixings last 35–40+ years. Coastal properties within 5km of the ocean should mandate 316 SS fixings and consider premium Colorbond steel for extended life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I install Colorbond fencing myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, experienced DIYers can install Colorbond fencing using panel kits from hardware stores. However, it requires post hole digging (600–900mm depth), concrete mixing, laser-level alignment, and proper spacing. Professional installation ensures compliance, warranty coverage, and saves time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between good-neighbour and standard Colorbond fencing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Good-neighbour (double-sided) Colorbond fencing shows the finished side to both properties, with posts and rails sandwiched between panels. Standard (single-sided) fencing shows panels on one side and posts/rails on the other. Good-neighbour fencing costs $10–$20 more per metre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the most popular Colorbond fence colors in Melbourne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most popular Colorbond fence colors in Melbourne are Monument® (charcoal grey), Basalt® (deep grey-black), and Woodland Grey® (mid-grey). These neutral tones complement most home styles and maintain visual appeal over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to remove an old fence before installing Colorbond?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Old fence removal costs $12–$20 per metre in Melbourne, depending on material type and post depth. A typical 20-metre fence removal costs $240–$400. Concrete post removal adds $30–$60 per post if footings are deep or heavily reinforced."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are plinths necessary for Colorbond fencing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plinths are not necessary but offer practical and aesthetic benefits. A 100–200mm concrete or steel plinth protects Colorbond panels from ground moisture and extends fence life. They add $42–$84 per bay to the cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in a professional Colorbond fence installation quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professional quote includes: site measurement, Colorbond steel panels, posts and rails, concrete footings (600–900mm depth), top capping, hardware, labor, and workmanship warranty (5–10 years). Not included: council permits, old fence removal (unless specified), gates, or unforeseen site complications."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Calculator JavaScript -->
+    <script>
+        // Pricing constants
+        const PRICING = {
+            baseMaterial: 98, // per metre for 1.8m supply
+            heightMultipliers: {
+                1.5: 0.9,
+                1.8: 1.0,
+                2.1: 1.2,
+                2.4: 1.35
+            },
+            premiumSurcharge: 0.10, // 10% for premium finish
+            plinthPerBay: {
+                plinth1: 42,
+                plinth2: 84
+            },
+            latticePerBay: 75,
+            hardware: 4, // per metre
+            postAndCap: 38, // per post
+            singleGate: { supply: 310, labour: 130 },
+            doubleGate: { supply: 620, labour: 220 },
+            labourBase: {
+                'se-melb': 65,
+                'greater-melb': 70,
+                'other-vic': 75
+            },
+            regionMultiplier: {
+                'se-melb': 1.0,
+                'greater-melb': 1.05,
+                'other-vic': 1.10
+            },
+            terrainMultiplier: {
+                'easy': 0.95,
+                'standard': 1.0,
+                'complex': 1.12
+            },
+            removal: 12, // per metre
+            gst: 0.10
+        };
+
+        let projectType = 'supply'; // 'supply' or 'installed'
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load from URL params if present
+            loadFromURL();
+
+            // Set up toggle buttons
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    projectType = this.dataset.type;
+                    calculate();
+                });
+            });
+
+            // Set up all inputs to recalculate on change
+            document.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('input', calculate);
+                input.addEventListener('change', calculate);
+            });
+
+            // Initial calculation
+            calculate();
+        });
+
+        function calculate() {
+            const length = parseFloat(document.getElementById('length').value) || 0;
+            const height = parseFloat(document.getElementById('height').value);
+            const profile = document.getElementById('profile').value;
+            const finish = document.getElementById('finish').value;
+            const postsRails = document.getElementById('postsRails').checked;
+            const corners = parseInt(document.getElementById('corners').value) || 0;
+            const singleGates = parseInt(document.getElementById('singleGates').value) || 0;
+            const doubleGates = parseInt(document.getElementById('doubleGates').value) || 0;
+            const region = document.getElementById('region').value;
+            const terrain = document.getElementById('terrain').value;
+            const removal = document.getElementById('removal').checked;
+
+            let breakdown = [];
+
+            // Base material cost
+            let materialCost = PRICING.baseMaterial * PRICING.heightMultipliers[height] * length;
+
+            // Premium finish surcharge
+            if (finish === 'premium') {
+                materialCost *= (1 + PRICING.premiumSurcharge);
+            }
+
+            breakdown.push({ item: 'Colorbond Panels', cost: materialCost });
+
+            // Hardware
+            const hardwareCost = PRICING.hardware * length;
+            breakdown.push({ item: 'Hardware & Fixings', cost: hardwareCost });
+
+            // Posts and rails
+            let postsRailsCost = 0;
+            if (postsRails) {
+                const numPosts = Math.ceil(length / 2.4) + corners;
+                postsRailsCost = PRICING.postAndCap * numPosts;
+                breakdown.push({ item: `Posts & Caps (${numPosts})`, cost: postsRailsCost });
+            }
+
+            // Profile extras (plinths, lattice)
+            let profileCost = 0;
+            const numBays = Math.ceil(length / 2.4);
+            if (profile === 'plinth1') {
+                profileCost = PRICING.plinthPerBay.plinth1 * numBays;
+                breakdown.push({ item: `Plinth 1-row (${numBays} bays)`, cost: profileCost });
+            } else if (profile === 'plinth2') {
+                profileCost = PRICING.plinthPerBay.plinth2 * numBays;
+                breakdown.push({ item: `Double Plinth (${numBays} bays)`, cost: profileCost });
+            } else if (profile === 'lattice') {
+                profileCost = PRICING.latticePerBay * numBays;
+                breakdown.push({ item: `Lattice Top (${numBays} bays)`, cost: profileCost });
+            }
+
+            // Gates
+            let gatesCost = 0;
+            if (singleGates > 0) {
+                gatesCost += singleGates * PRICING.singleGate.supply;
+                breakdown.push({ item: `Single Gates (${singleGates})`, cost: singleGates * PRICING.singleGate.supply });
+            }
+            if (doubleGates > 0) {
+                gatesCost += doubleGates * PRICING.doubleGate.supply;
+                breakdown.push({ item: `Double Gates (${doubleGates})`, cost: doubleGates * PRICING.doubleGate.supply });
+            }
+
+            // Old fence removal
+            let removalCost = 0;
+            if (removal) {
+                removalCost = PRICING.removal * length;
+                breakdown.push({ item: 'Old Fence Removal', cost: removalCost });
+            }
+
+            // Labour (if installed)
+            let labourCost = 0;
+            if (projectType === 'installed') {
+                labourCost = PRICING.labourBase[region] * length * PRICING.terrainMultiplier[terrain];
+
+                // Gate labour
+                if (singleGates > 0) {
+                    labourCost += singleGates * PRICING.singleGate.labour;
+                }
+                if (doubleGates > 0) {
+                    labourCost += doubleGates * PRICING.doubleGate.labour;
+                }
+
+                breakdown.push({ item: 'Installation Labour', cost: labourCost });
+            }
+
+            // Subtotal (ex-GST)
+            const subtotal = materialCost + hardwareCost + postsRailsCost + profileCost + gatesCost + removalCost + labourCost;
+
+            // GST
+            const gst = subtotal * PRICING.gst;
+
+            // Total (incl-GST)
+            const total = subtotal + gst;
+
+            // Per metre cost
+            const perMetre = total / length;
+
+            // Update display
+            document.getElementById('totalCost').textContent = '$' + total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            document.getElementById('perMetreCost').textContent = '$' + perMetre.toFixed(2) + ' per metre';
+
+            // Update breakdown table
+            const tbody = document.querySelector('#breakdownTable tbody');
+            tbody.innerHTML = '';
+
+            breakdown.forEach(item => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${item.item}</td>
+                    <td>$${item.cost.toFixed(2)}</td>
+                    <td>$${(item.cost * 1.1).toFixed(2)}</td>
+                `;
+            });
+
+            // Add GST row
+            const gstRow = tbody.insertRow();
+            gstRow.innerHTML = `
+                <td><strong>GST (10%)</strong></td>
+                <td>—</td>
+                <td><strong>$${gst.toFixed(2)}</strong></td>
+            `;
+
+            // Add total row
+            const totalRow = tbody.insertRow();
+            totalRow.innerHTML = `
+                <td><strong>Total</strong></td>
+                <td><strong>$${subtotal.toFixed(2)}</strong></td>
+                <td><strong>$${total.toFixed(2)}</strong></td>
+            `;
+
+            // Update URL
+            updateURL();
+
+            // Track with GA (if available)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculator_use', {
+                    'event_category': 'Calculator',
+                    'event_label': projectType,
+                    'value': Math.round(total)
+                });
+            }
+        }
+
+        function updateURL() {
+            const params = new URLSearchParams();
+            params.set('length', document.getElementById('length').value);
+            params.set('height', document.getElementById('height').value);
+            params.set('profile', document.getElementById('profile').value);
+            params.set('finish', document.getElementById('finish').value);
+            params.set('postsRails', document.getElementById('postsRails').checked ? '1' : '0');
+            params.set('corners', document.getElementById('corners').value);
+            params.set('singleGates', document.getElementById('singleGates').value);
+            params.set('doubleGates', document.getElementById('doubleGates').value);
+            params.set('region', document.getElementById('region').value);
+            params.set('terrain', document.getElementById('terrain').value);
+            params.set('removal', document.getElementById('removal').checked ? '1' : '0');
+            params.set('type', projectType);
+
+            const newUrl = window.location.pathname + '?' + params.toString();
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        function loadFromURL() {
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.has('length')) document.getElementById('length').value = params.get('length');
+            if (params.has('height')) document.getElementById('height').value = params.get('height');
+            if (params.has('profile')) document.getElementById('profile').value = params.get('profile');
+            if (params.has('finish')) document.getElementById('finish').value = params.get('finish');
+            if (params.has('postsRails')) document.getElementById('postsRails').checked = params.get('postsRails') === '1';
+            if (params.has('corners')) document.getElementById('corners').value = params.get('corners');
+            if (params.has('singleGates')) document.getElementById('singleGates').value = params.get('singleGates');
+            if (params.has('doubleGates')) document.getElementById('doubleGates').value = params.get('doubleGates');
+            if (params.has('region')) document.getElementById('region').value = params.get('region');
+            if (params.has('terrain')) document.getElementById('terrain').value = params.get('terrain');
+            if (params.has('removal')) document.getElementById('removal').checked = params.get('removal') === '1';
+
+            if (params.has('type')) {
+                projectType = params.get('type');
+                document.querySelectorAll('.toggle-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.type === projectType);
+                });
+            }
+        }
+
+        function sendToQuote() {
+            const total = document.getElementById('totalCost').textContent;
+            const perMetre = document.getElementById('perMetreCost').textContent;
+            const url = window.location.href;
+
+            const message = `Hi, I used your Colorbond fence calculator and got an estimate of ${total} (${perMetre}). Can you provide a formal quote? Calculator link: ${url}`;
+
+            window.location.href = `/contact.html?message=${encodeURIComponent(message)}`;
+        }
+
+        function shareEstimate() {
+            const url = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Colorbond Fence Price Estimate',
+                    text: 'Check out my Colorbond fence price estimate',
+                    url: url
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard! You can share this estimate with others.');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

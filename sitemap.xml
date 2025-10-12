@@ -22,6 +22,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Tools -->
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/colorbond-fence-price-calculator.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Services Hub -->
   <url>
     <loc>https://www.thesoutheastfencer.com.au/services/</loc>
