@@ -100,38 +100,74 @@
 
   <!-- Locations -->
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/mount-eliza.html</loc>
+    <loc>https://www.thesoutheastfencer.com.au/mount-eliza-fencing/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/mornington.html</loc>
+    <loc>https://www.thesoutheastfencer.com.au/mornington-fencing/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/frankston.html</loc>
+    <loc>https://www.thesoutheastfencer.com.au/frankston-fencing/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/sorrento.html</loc>
+    <loc>https://www.thesoutheastfencer.com.au/sorrento-fencing/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/rosebud.html</loc>
+    <loc>https://www.thesoutheastfencer.com.au/rosebud-fencing/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thesoutheastfencer.com.au/locations/dromana.html</loc>
-    <lastmod>2025-10-10</lastmod>
+    <loc>https://www.thesoutheastfencer.com.au/dromana-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/carrum-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/carrum-downs-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/seaford-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/cranbourne-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/flinders-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.thesoutheastfencer.com.au/hampton-fencing/</loc>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

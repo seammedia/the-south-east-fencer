@@ -2,6 +2,21 @@
   "version": 2,
   "redirects": [
     {
+      "source": "/locations/:loc",
+      "destination": "/:loc-fencing/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:loc.html",
+      "destination": "/:loc-fencing/",
+      "permanent": true
+    },
+    {
+      "source": "/:loc-fencing.html",
+      "destination": "/:loc-fencing/",
+      "permanent": true
+    },
+    {
       "source": "/services/colorbond-fencing.html",
       "destination": "/services/fencing-installation.html",
       "permanent": true
